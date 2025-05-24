@@ -63,6 +63,7 @@ function GetData() {
 
 # Analyse Data
 function AnalyseData() {
+    set -x # Enable command tracing
     echo "开始分析数据..."
     # Define domain regex patterns
     domain_regex="^(([a-z]{1})|([a-z]{1}[a-z]{1})|([a-z]{1}[0-9]{1})|([0-9]{1}[a-z]{1})|([a-z0-9][-\.a-z0-9]{1,61}[a-z0-9]))\.([a-z]{2,13}|[a-z0-9-]{2,30}\.[a-z]{2,3})$"
@@ -159,6 +160,7 @@ function AnalyseData() {
     lite_cnacc_data=($(cat "./Temp/lite_cnacc_data.tmp" 2>/dev/null | sort | uniq | awk "{ print $0 }"))
     lite_gfwlist_data=($(cat "./Temp/lite_gfwlist_data.tmp" 2>/dev/null | sort | uniq | awk "{ print $0 }"))
     echo "数据分析完成。"
+    set +x # Disable command tracing
 }
 
 # Generate Rules
