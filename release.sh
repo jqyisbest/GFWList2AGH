@@ -257,7 +257,7 @@ function GenerateRules() {
             }
             FileName 
             if [[ "${generate_mode}" == "full_combine" || "${generate_mode}" == "lite_combine" ]]; then GenerateDefaultUpstream; GenerateRulesProcess;
-            elif [[ "${dns_mode}" == "default" ]]; then GenerateDefaultUpstream; GenerateRulesProcess; # This case might not be used if combine logic is preferred
+            elif [[ "${dns_mode}" == "default" ]]; then GenerateDefaultUpstream; GenerateRulesProcess; 
             elif [[ "${dns_mode}" == "domestic" || "${dns_mode}" == "foreign" ]]; then GenerateDefaultUpstream; GenerateRulesProcess; fi
         ;;
         adguardhome_new) 
@@ -280,7 +280,7 @@ function GenerateRules() {
                 fi
             }
             function GenerateRulesFooter() {
-                sed -i 's/\/$//' "${file_path}" # Remove trailing slash if any domains were added
+                sed -i 's/\/$//' "${file_path}" 
                 if [ "${dns_mode}" == "default" ]; then echo -e "]#" >> "${file_path}";
                 elif [ "${dns_mode}" == "domestic" ]; then echo -e "]${domestic_dns[*]}" >> "${file_path}";
                 elif [ "${dns_mode}" == "foreign" ]; then echo -e "]${foreign_dns[*]}" >> "${file_path}"; fi
@@ -398,18 +398,10 @@ function OutputData() {
     # Files for CNACC domains (white), using DOMESTIC_DNS for rules, with FOREIGN_DNS as default at top
     software_name="adguardhome" && generate_file="white" && generate_mode="full_combine" && dns_mode="domestic" && GenerateRules 
     software_name="adguardhome" && generate_file="white" && generate_mode="lite_combine" && dns_mode="domestic" && GenerateRules 
-
-    # generate_file="blackwhite" (named blacklist_*.txt, contains gfwlist_data) should use FOREIGN_DNS for its rules
-    software_name="adguardhome" && generate_file="blackwhite" && generate_mode="full_combine" && dns_mode="foreign" && GenerateRules
-    software_name="adguardhome" && generate_file="blackwhite" && generate_mode="lite_combine" && dns_mode="foreign" && GenerateRules
-    # generate_file="whiteblack" (named whitelist_*.txt, contains cnacc_data) should use DOMESTIC_DNS for its rules
-    software_name="adguardhome" && generate_file="whiteblack" && generate_mode="full_combine" && dns_mode="domestic" && GenerateRules
-    software_name="adguardhome" && generate_file="whiteblack" && generate_mode="lite_combine" && dns_mode="domestic" && GenerateRules
     
-    # generate_file="black" (named blacklist_*.txt, contains gfwlist_data) should use FOREIGN_DNS for its rules
+    # These generate files with specific rule upstreams, and appropriate default upstreams at the top
     software_name="adguardhome" && generate_file="black" && generate_mode="full" && dns_mode="foreign" && GenerateRules 
     software_name="adguardhome" && generate_file="black" && generate_mode="lite" && dns_mode="foreign" && GenerateRules 
-    # generate_file="white" (named whitelist_*.txt, contains cnacc_data) should use DOMESTIC_DNS for its rules
     software_name="adguardhome" && generate_file="white" && generate_mode="full" && dns_mode="domestic" && GenerateRules 
     software_name="adguardhome" && generate_file="white" && generate_mode="lite" && dns_mode="domestic" && GenerateRules 
 
@@ -418,11 +410,6 @@ function OutputData() {
     software_name="adguardhome_new" && generate_file="black" && generate_mode="lite_combine" && dns_mode="foreign" && GenerateRules
     software_name="adguardhome_new" && generate_file="white" && generate_mode="full_combine" && dns_mode="domestic" && GenerateRules
     software_name="adguardhome_new" && generate_file="white" && generate_mode="lite_combine" && dns_mode="domestic" && GenerateRules
-
-    software_name="adguardhome_new" && generate_file="blackwhite" && generate_mode="full_combine" && dns_mode="foreign" && GenerateRules
-    software_name="adguardhome_new" && generate_file="blackwhite" && generate_mode="lite_combine" && dns_mode="foreign" && GenerateRules
-    software_name="adguardhome_new" && generate_file="whiteblack" && generate_mode="full_combine" && dns_mode="domestic" && GenerateRules
-    software_name="adguardhome_new" && generate_file="whiteblack" && generate_mode="lite_combine" && dns_mode="domestic" && GenerateRules
     
     software_name="adguardhome_new" && generate_file="black" && generate_mode="full" && dns_mode="foreign" && GenerateRules 
     software_name="adguardhome_new" && generate_file="black" && generate_mode="lite" && dns_mode="foreign" && GenerateRules 
