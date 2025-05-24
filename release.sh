@@ -25,7 +25,7 @@ function GetData() {
     )
     # Array of URLs for custom modification data for this script
     gfwlist2agh_modify=(
-        "https://raw.githubusercontent.com/hezhijie0327/GFWList2AGH/source/data/data_modify.txt"
+        "https://raw.githubusercontent.com/jqyisbest/GFWList2AGH/source/data/data_modify.txt"
     )
 
     # Remove any existing temporary files/directories and create a new Temp directory
@@ -63,11 +63,13 @@ function GetData() {
 
 # Analyse Data
 function AnalyseData() {
-    # set -x # Debugging line removed
+    set -x # Enable command tracing
     echo "开始分析数据..."
     # Define domain regex patterns
-    domain_regex="^([a-z0-9]+(-[a-z0-9]+)*\.)+[a-z]{2,}$" 
-    lite_domain_regex="^([a-z]{2,13}|[a-z0-9-]{2,30}\.[a-z]{2,3})$"
+    # This regex is crucial. If it's too strict, it might filter out valid domains from the input lists.
+    # For example, it expects a structure like label.tld or label.country.tld and might not handle all subdomain levels well.
+    domain_regex="^([a-z0-9]+(-[a-z0-9]+)*\.)+[a-z]{2,}$" # More permissive regex for full domain names
+    lite_domain_regex="^([a-z]{2,13}|[a-z0-9-]{2,30}\.[a-z]{2,3})$" # For TLDs or SLD.TLD
 
     # Process gfwlist2agh_modify.tmp to extract various modification rules
     cat "./Temp/gfwlist2agh_modify.tmp" | grep -v "\#" | grep "\(\@\%\@\)\|\(\@\%\!\)\|\(\!\&\@\)\|\(\@\@\@\)" | tr -d "\!\%\&\(\)\*\@" | grep -E "${domain_regex}" | sort | uniq > "./Temp/cnacc_addition.tmp"
@@ -89,6 +91,7 @@ function AnalyseData() {
     cat "./Temp/cnacc_trusted.tmp" | sed "s/\/114\.114\.114\.114//g;s/server\=\///g" | tr "A-Z" "a-z" | grep -E "${domain_regex}" | sort | uniq > "./Temp/cnacc_trust.tmp"
     cat "./Temp/cnacc_trust.tmp" | grep -E "${lite_domain_regex}" | sort | uniq > "./Temp/lite_cnacc_trust.tmp"
     
+    # Using the redefined, more permissive domain_regex for initial checklist creation
     cat "./Temp/cnacc_domain.tmp" | sed "s/domain\://g;s/full\://g" | tr "A-Z" "a-z" | grep -E "${domain_regex}" | sort | uniq > "./Temp/cnacc_checklist.tmp"
     cat "./Temp/gfwlist_domain.tmp" | sed "s/domain\://g;s/full\://g;s/http\:\/\///g;s/https\:\/\///g" | tr -d "|" | tr "A-Z" "a-z" | grep -E "${domain_regex}" | sort | uniq > "./Temp/gfwlist_checklist.tmp"
     
@@ -150,7 +153,11 @@ function AnalyseData() {
     awk 'NR == FNR { tmp[$0] = 1 } NR > FNR { if ( tmp[$0] != 1 ) print }' "./Temp/cnacc_subtraction.tmp" "./Temp/lite_cnacc_added.tmp" > "./Temp/lite_cnacc_data.tmp"
     awk 'NR == FNR { tmp[$0] = 1 } NR > FNR { if ( tmp[$0] != 1 ) print }' "./Temp/gfwlist_subtraction.tmp" "./Temp/lite_gfwlist_added.tmp" > "./Temp/lite_gfwlist_data.tmp"
 
-    # Debugging lines for file counts removed
+    # echo "调试: 各 *_data.tmp 文件行数:" # Debugging line removed
+    # wc -l ./Temp/cnacc_data.tmp || echo "./Temp/cnacc_data.tmp 不存在或为空" # Debugging line removed
+    # wc -l ./Temp/lite_cnacc_data.tmp || echo "./Temp/lite_cnacc_data.tmp 不存在或为空" # Debugging line removed
+    # wc -l ./Temp/gfwlist_data.tmp || echo "./Temp/gfwlist_data.tmp 不存在或为空" # Debugging line removed
+    # wc -l ./Temp/lite_gfwlist_data.tmp || echo "./Temp/lite_gfwlist_data.tmp 不存在或为空" # Debugging line removed
 
     # Populate shell arrays with the final domain lists using mapfile for robustness
     mapfile -t cnacc_data_temp < <(cat "./Temp/cnacc_data.tmp" "./Temp/lite_cnacc_data.tmp" | sort -u)
@@ -166,7 +173,7 @@ function AnalyseData() {
     lite_gfwlist_data=("${lite_gfwlist_data_temp[@]}")
     
     echo "数据分析完成。"
-    # set +x # Debugging line removed
+    set +x # Disable command tracing
 }
 
 # Generate Rules
@@ -203,21 +210,21 @@ function GenerateRules() {
         case ${software_name} in
             adguardhome|adguardhome_new)
                 if [ "${generate_mode}" == "full" ] || [ "${generate_mode}" == "lite" ] || [ "${generate_mode}" == "full_combine" ] || [ "${generate_mode}" == "lite_combine" ]; then
-                    if [ "${generate_file}" == "blackwhite" ]; then
+                    if [ "${generate_file}" == "blackwhite" ]; then # File is named "blacklist_..." -> Default upstream is foreign
                         for foreign_dns_task in "${!foreign_dns[@]}"; do
                             echo "${foreign_dns[$foreign_dns_task]}" >> "${file_path}"
                         done
-                    elif [ "${generate_file}" == "whiteblack" ]; then
+                    elif [ "${generate_file}" == "whiteblack" ]; then # File is named "whitelist_..." -> Default upstream is domestic
                         for domestic_dns_task in "${!domestic_dns[@]}"; do
                             echo "${domestic_dns[$domestic_dns_task]}" >> "${file_path}"
                         done
                     fi
-                else 
-                    if [ "${generate_file}" == "black" ]; then
+                else # For simple "black" or "white" files
+                    if [ "${generate_file}" == "black" ]; then # GFW list file -> Default upstream is domestic (opposite of rule content)
                         for domestic_dns_task in "${!domestic_dns[@]}"; do
                             echo "${domestic_dns[$domestic_dns_task]}" >> "${file_path}"
                         done
-                    elif [ "${generate_file}" == "white" ]; then
+                    elif [ "${generate_file}" == "white" ]; then # CNACC list file -> Default upstream is foreign (opposite of rule content)
                         for foreign_dns_task in "${!foreign_dns[@]}"; do
                             echo "${foreign_dns[$foreign_dns_task]}" >> "${file_path}"
                         done
@@ -404,33 +411,43 @@ function GenerateRules() {
 # Output Data
 function OutputData() {
     echo "开始生成规则文件..."
-    ## AdGuard Home
+    ## AdGuard Home: Rules with default upstream (#)
     software_name="adguardhome" && generate_file="black" && generate_mode="full_combine" && dns_mode="default" && GenerateRules 
     software_name="adguardhome" && generate_file="black" && generate_mode="lite_combine" && dns_mode="default" && GenerateRules 
     software_name="adguardhome" && generate_file="white" && generate_mode="full_combine" && dns_mode="default" && GenerateRules 
     software_name="adguardhome" && generate_file="white" && generate_mode="lite_combine" && dns_mode="default" && GenerateRules 
-    software_name="adguardhome" && generate_file="blackwhite" && generate_mode="full_combine" && dns_mode="domestic" && GenerateRules
-    software_name="adguardhome" && generate_file="blackwhite" && generate_mode="lite_combine" && dns_mode="domestic" && GenerateRules
-    software_name="adguardhome" && generate_file="whiteblack" && generate_mode="full_combine" && dns_mode="foreign" && GenerateRules
-    software_name="adguardhome" && generate_file="whiteblack" && generate_mode="lite_combine" && dns_mode="foreign" && GenerateRules
-    software_name="adguardhome" && generate_file="black" && generate_mode="full" && dns_mode="domestic" && GenerateRules 
-    software_name="adguardhome" && generate_file="black" && generate_mode="lite" && dns_mode="domestic" && GenerateRules 
-    software_name="adguardhome" && generate_file="white" && generate_mode="full" && dns_mode="foreign" && GenerateRules 
-    software_name="adguardhome" && generate_file="white" && generate_mode="lite" && dns_mode="foreign" && GenerateRules 
 
-    ## AdGuard Home (New) 
+    ## AdGuard Home: GFW lists to FOREIGN DNS, CNACC lists to DOMESTIC DNS
+    # generate_file="blackwhite" (uses gfwlist_data) should go to foreign_dns
+    software_name="adguardhome" && generate_file="blackwhite" && generate_mode="full_combine" && dns_mode="foreign" && GenerateRules
+    software_name="adguardhome" && generate_file="blackwhite" && generate_mode="lite_combine" && dns_mode="foreign" && GenerateRules
+    # generate_file="whiteblack" (uses cnacc_data) should go to domestic_dns
+    software_name="adguardhome" && generate_file="whiteblack" && generate_mode="full_combine" && dns_mode="domestic" && GenerateRules
+    software_name="adguardhome" && generate_file="whiteblack" && generate_mode="lite_combine" && dns_mode="domestic" && GenerateRules
+    
+    # generate_file="black" (uses gfwlist_data) should go to foreign_dns
+    software_name="adguardhome" && generate_file="black" && generate_mode="full" && dns_mode="foreign" && GenerateRules 
+    software_name="adguardhome" && generate_file="black" && generate_mode="lite" && dns_mode="foreign" && GenerateRules 
+    # generate_file="white" (uses cnacc_data) should go to domestic_dns
+    software_name="adguardhome" && generate_file="white" && generate_mode="full" && dns_mode="domestic" && GenerateRules 
+    software_name="adguardhome" && generate_file="white" && generate_mode="lite" && dns_mode="domestic" && GenerateRules 
+
+    ## AdGuard Home (New): Rules with default upstream (#)
     software_name="adguardhome_new" && generate_file="black" && generate_mode="full_combine" && dns_mode="default" && GenerateRules
     software_name="adguardhome_new" && generate_file="black" && generate_mode="lite_combine" && dns_mode="default" && GenerateRules
     software_name="adguardhome_new" && generate_file="white" && generate_mode="full_combine" && dns_mode="default" && GenerateRules
     software_name="adguardhome_new" && generate_file="white" && generate_mode="lite_combine" && dns_mode="default" && GenerateRules
-    software_name="adguardhome_new" && generate_file="blackwhite" && generate_mode="full_combine" && dns_mode="domestic" && GenerateRules
-    software_name="adguardhome_new" && generate_file="blackwhite" && generate_mode="lite_combine" && dns_mode="domestic" && GenerateRules
-    software_name="adguardhome_new" && generate_file="whiteblack" && generate_mode="full_combine" && dns_mode="foreign" && GenerateRules
-    software_name="adguardhome_new" && generate_file="whiteblack" && generate_mode="lite_combine" && dns_mode="foreign" && GenerateRules
-    software_name="adguardhome_new" && generate_file="black" && generate_mode="full" && dns_mode="domestic" && GenerateRules 
-    software_name="adguardhome_new" && generate_file="black" && generate_mode="lite" && dns_mode="domestic" && GenerateRules 
-    software_name="adguardhome_new" && generate_file="white" && generate_mode="full" && dns_mode="foreign" && GenerateRules 
-    software_name="adguardhome_new" && generate_file="white" && generate_mode="lite" && dns_mode="foreign" && GenerateRules 
+
+    ## AdGuard Home (New): GFW lists to FOREIGN DNS, CNACC lists to DOMESTIC DNS
+    software_name="adguardhome_new" && generate_file="blackwhite" && generate_mode="full_combine" && dns_mode="foreign" && GenerateRules
+    software_name="adguardhome_new" && generate_file="blackwhite" && generate_mode="lite_combine" && dns_mode="foreign" && GenerateRules
+    software_name="adguardhome_new" && generate_file="whiteblack" && generate_mode="full_combine" && dns_mode="domestic" && GenerateRules
+    software_name="adguardhome_new" && generate_file="whiteblack" && generate_mode="lite_combine" && dns_mode="domestic" && GenerateRules
+    
+    software_name="adguardhome_new" && generate_file="black" && generate_mode="full" && dns_mode="foreign" && GenerateRules 
+    software_name="adguardhome_new" && generate_file="black" && generate_mode="lite" && dns_mode="foreign" && GenerateRules 
+    software_name="adguardhome_new" && generate_file="white" && generate_mode="full" && dns_mode="domestic" && GenerateRules 
+    software_name="adguardhome_new" && generate_file="white" && generate_mode="lite" && dns_mode="domestic" && GenerateRules 
 
     ## Bind9
     software_name="bind9" && generate_file="black" && generate_mode="full" && dns_mode="foreign" && GenerateRules 
