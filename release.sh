@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Current Version: 1.2.9 (已修改数据源并添加统计)
+# Current Version: 1.2.9 (已修改数据源并添加统计和路径修正)
 
 ## How to get and use?
 # git clone "https://github.com/jqyisbest/GFWList2AGH.git" && cd GFWList2AGH && bash ./source/release.sh
@@ -29,33 +29,34 @@ function GetData() {
     )
 
     # Remove any existing temporary files/directories and create a new Temp directory
-    rm -rf ./gfwlist2* ./Temp && mkdir ./Temp && cd ./Temp
+    echo "正在清理并创建临时目录 ./Temp..."
+    rm -rf ./Temp && mkdir -p ./Temp
 
     # Download and process cnacc_domain lists
     echo "正在下载 CN 域名列表..."
     for cnacc_domain_task in "${!cnacc_domain[@]}"; do
-        curl -s --connect-timeout 15 "${cnacc_domain[$cnacc_domain_task]}" | sed "s/^\.//g" >> ./cnacc_domain.tmp
+        curl -s --connect-timeout 15 "${cnacc_domain[$cnacc_domain_task]}" | sed "s/^\.//g" >> ./Temp/cnacc_domain.tmp
     done
     echo "CN 域名列表下载完成。"
 
     # Download cnacc_trusted lists
     echo "正在下载受信任 CN 域名列表..."
     for cnacc_trusted_task in "${!cnacc_trusted[@]}"; do
-        curl -s --connect-timeout 15 "${cnacc_trusted[$cnacc_trusted_task]}" >> ./cnacc_trusted.tmp
+        curl -s --connect-timeout 15 "${cnacc_trusted[$cnacc_trusted_task]}" >> ./Temp/cnacc_trusted.tmp
     done
     echo "受信任 CN 域名列表下载完成。"
 
     # Download and process gfwlist_domain lists
     echo "正在下载 GFW 域名列表..."
     for gfwlist_domain_task in "${!gfwlist_domain[@]}"; do
-        curl -s --connect-timeout 15 "${gfwlist_domain[$gfwlist_domain_task]}" | sed "s/^\.//g" >> ./gfwlist_domain.tmp
+        curl -s --connect-timeout 15 "${gfwlist_domain[$gfwlist_domain_task]}" | sed "s/^\.//g" >> ./Temp/gfwlist_domain.tmp
     done
     echo "GFW 域名列表下载完成。"
 
     # Download gfwlist2agh_modify list
     echo "正在下载自定义修改列表..."
     for gfwlist2agh_modify_task in "${!gfwlist2agh_modify[@]}"; do
-        curl -s --connect-timeout 15 "${gfwlist2agh_modify[$gfwlist2agh_modify_task]}" >> ./gfwlist2agh_modify.tmp
+        curl -s --connect-timeout 15 "${gfwlist2agh_modify[$gfwlist2agh_modify_task]}" >> ./Temp/gfwlist2agh_modify.tmp
     done
     echo "自定义修改列表下载完成。"
 }
@@ -68,46 +69,55 @@ function AnalyseData() {
     lite_domain_regex="^([a-z]{2,13}|[a-z0-9-]{2,30}\.[a-z]{2,3})$"
 
     # Process gfwlist2agh_modify.tmp to extract various modification rules
-    cat "./gfwlist2agh_modify.tmp" | grep -v "\#" | grep "\(\@\%\@\)\|\(\@\%\!\)\|\(\!\&\@\)\|\(\@\@\@\)" | tr -d "\!\%\&\(\)\*\@" | grep -E "${domain_regex}" | sort | uniq > "./cnacc_addition.tmp"
-    cat "./gfwlist2agh_modify.tmp" | grep -v "\#" | grep "\(\!\%\!\)\|\(\@\&\!\)\|\(\!\%\@\)\|\(\!\!\!\)" | tr -d "\!\%\&\(\)\*\@" | grep -E "${domain_regex}" | sort | uniq > "./cnacc_subtraction.tmp"
-    cat "./gfwlist2agh_modify.tmp" | grep -v "\#" | grep "\(\*\%\*\)\|\(\*\*\*\)" | tr -d "\!\%\&\(\)\*\@" | grep -E "${domain_regex}" | xargs | sed "s/\ /\|/g" | sort | uniq > "./cnacc_exclusion.tmp"
-    cat "./gfwlist2agh_modify.tmp" | grep -v "\#" | grep "\(\*\%\*\)\|\(\*\*\*\)" | tr -d "\!\%\&\(\)\*\@" | grep -E "${lite_domain_regex}" | xargs | sed "s/\ /\|/g" | sort | uniq > "./lite_cnacc_exclusion.tmp"
-    cat "./gfwlist2agh_modify.tmp" | grep -v "\#" | grep "\(\!\%\*\)\|\(\!\*\*\)" | tr -d "\!\%\&\(\)\*\@" | grep -E "${domain_regex}" | xargs | sed "s/\ /\|/g" | sort | uniq > "./cnacc_keyword.tmp"
-    cat "./gfwlist2agh_modify.tmp" | grep -v "\#" | grep "\(\!\%\*\)\|\(\!\*\*\)" | tr -d "\!\%\&\(\)\*\@" | grep -E "${lite_domain_regex}" | xargs | sed "s/\ /\|/g" | sort | uniq > "./lite_cnacc_keyword.tmp"
-    cat "./gfwlist2agh_modify.tmp" | grep -v "\#" | grep "\(\@\&\@\)\|\(\@\&\!\)\|\(\!\%\@\)\|\(\@\@\@\)" | tr -d "\!\%\&\(\)\*\@" | grep -E "${domain_regex}" | sort | uniq > "./gfwlist_addition.tmp"
-    cat "./gfwlist2agh_modify.tmp" | grep -v "\#" | grep "\(\!\&\!\)\|\(\@\%\!\)\|\(\!\&\@\)\|\(\!\!\!\)" | tr -d "\!\%\&\(\)\*\@" | grep -E "${domain_regex}" | sort | uniq > "./gfwlist_subtraction.tmp"
-    cat "./gfwlist2agh_modify.tmp" | grep -v "\#" | grep "\(\*\&\*\)\|\(\*\*\*\)" | tr -d "\!\%\&\(\)\*\@" | grep -E "${domain_regex}" | xargs | sed "s/\ /\|/g" | sort | uniq > "./gfwlist_exclusion.tmp"
-    cat "./gfwlist2agh_modify.tmp" | grep -v "\#" | grep "\(\*\&\*\)\|\(\*\*\*\)" | tr -d "\!\%\&\(\)\*\@" | grep -E "${lite_domain_regex}" | xargs | sed "s/\ /\|/g" | sort | uniq > "./lite_gfwlist_exclusion.tmp"
-    cat "./gfwlist2agh_modify.tmp" | grep -v "\#" | grep "\(\!\&\*\)\|\(\!\*\*\)" | tr -d "\!\%\&\(\)\*\@" | grep -E "${domain_regex}" | xargs | sed "s/\ /\|/g" | sort | uniq > "./gfwlist_keyword.tmp"
-    cat "./gfwlist2agh_modify.tmp" | grep -v "\#" | grep "\(\!\&\*\)\|\(\!\*\*\)" | tr -d "\!\%\&\(\)\*\@" | grep -E "${lite_domain_regex}" | xargs | sed "s/\ /\|/g" | sort | uniq > "./lite_gfwlist_keyword.tmp"
-    cat "./cnacc_addition.tmp" | grep -E "${lite_domain_regex}" | sort | uniq > "./lite_cnacc_addition.tmp"
-    cat "./gfwlist_addition.tmp" | grep -E "${lite_domain_regex}" | sort | uniq > "./lite_gfwlist_addition.tmp"
-    cat "./cnacc_trusted.tmp" | sed "s/\/114\.114\.114\.114//g;s/server\=\///g" | tr "A-Z" "a-z" | grep -E "${domain_regex}" | sort | uniq > "./cnacc_trust.tmp"
-    cat "./cnacc_trust.tmp" | grep -E "${lite_domain_regex}" | sort | uniq > "./lite_cnacc_trust.tmp"
-    cat "./cnacc_domain.tmp" | sed "s/domain\://g;s/full\://g" | tr "A-Z" "a-z" | grep -E "${domain_regex}" | sort | uniq > "./cnacc_checklist.tmp"
-    cat "./gfwlist_domain.tmp" | sed "s/domain\://g;s/full\://g;s/http\:\/\///g;s/https\:\/\///g" | tr -d "|" | tr "A-Z" "a-z" | grep -E "${domain_regex}" | sort | uniq > "./gfwlist_checklist.tmp"
-    cat "./cnacc_checklist.tmp" | rev | cut -d "." -f 1,2 | rev | sort | uniq > "./lite_cnacc_checklist.tmp"
-    cat "./gfwlist_checklist.tmp" | rev | cut -d "." -f 1,2 | rev | sort | uniq > "./lite_gfwlist_checklist.tmp"
-    awk 'NR == FNR { tmp[$0] = 1 } NR > FNR { if ( tmp[$0] != 1 ) print }' "./cnacc_checklist.tmp" "./gfwlist_checklist.tmp" > "./gfwlist_raw.tmp"
-    awk 'NR == FNR { tmp[$0] = 1 } NR > FNR { if ( tmp[$0] != 1 ) print }' "./gfwlist_checklist.tmp" "./cnacc_checklist.tmp" | grep -Ev "(\.($(cat './cnacc_exclusion.tmp'))$)|(^$(cat './cnacc_exclusion.tmp')$)|($(cat './cnacc_keyword.tmp'))" > "./cnacc_raw.tmp"
-    awk 'NR == FNR { tmp[$0] = 1 } NR > FNR { if ( tmp[$0] != 1 ) print }' "./lite_cnacc_checklist.tmp" "./lite_gfwlist_checklist.tmp" > "./lite_gfwlist_raw.tmp"
-    awk 'NR == FNR { tmp[$0] = 1 } NR > FNR { if ( tmp[$0] != 1 ) print }' "./lite_gfwlist_checklist.tmp" "./lite_cnacc_checklist.tmp" | grep -Ev "(\.($(cat './lite_cnacc_exclusion.tmp'))$)|(^$(cat './lite_cnacc_exclusion.tmp')$)|($(cat './lite_cnacc_keyword.tmp'))" > "./lite_cnacc_raw.tmp"
-    awk 'NR == FNR { tmp[$0] = 1 } NR > FNR { if ( tmp[$0] != 1 ) print }' "./cnacc_trust.tmp" "./gfwlist_raw.tmp" | grep -Ev "(\.($(cat './gfwlist_exclusion.tmp'))$)|(^$(cat './gfwlist_exclusion.tmp')$)|($(cat './gfwlist_keyword.tmp'))" > "./gfwlist_raw_new.tmp"
-    awk 'NR == FNR { tmp[$0] = 1 } NR > FNR { if ( tmp[$0] != 1 ) print }' "./cnacc_trust.tmp" "./lite_gfwlist_raw.tmp" | grep -Ev "(\.($(cat './lite_gfwlist_exclusion.tmp'))$)|(^$(cat './lite_gfwlist_exclusion.tmp')$)|($(cat './lite_gfwlist_keyword.tmp'))" > "./lite_gfwlist_raw_new.tmp"
-    cat "./cnacc_raw.tmp" "./lite_cnacc_raw.tmp" "./cnacc_addition.tmp" "./lite_cnacc_addition.tmp" "./cnacc_trust.tmp" "./lite_cnacc_trust.tmp" | sort | uniq > "./cnacc_added.tmp"
-    cat "./gfwlist_raw_new.tmp" "./lite_gfwlist_raw_new.tmp" "./gfwlist_addition.tmp" "./lite_gfwlist_addition.tmp" | sort | uniq > "./gfwlist_added.tmp"
-    cat "./lite_cnacc_raw.tmp" "./lite_cnacc_addition.tmp" "./lite_cnacc_trust.tmp" | sort | uniq > "./lite_cnacc_added.tmp"
-    cat "./lite_gfwlist_raw_new.tmp" "./lite_gfwlist_addition.tmp" | sort | uniq > "./lite_gfwlist_added.tmp"
-    awk 'NR == FNR { tmp[$0] = 1 } NR > FNR { if ( tmp[$0] != 1 ) print }' "./cnacc_subtraction.tmp" "./cnacc_added.tmp" > "./cnacc_data.tmp"
-    awk 'NR == FNR { tmp[$0] = 1 } NR > FNR { if ( tmp[$0] != 1 ) print }' "./gfwlist_subtraction.tmp" "./gfwlist_added.tmp" > "./gfwlist_data.tmp"
-    awk 'NR == FNR { tmp[$0] = 1 } NR > FNR { if ( tmp[$0] != 1 ) print }' "./cnacc_subtraction.tmp" "./lite_cnacc_added.tmp" > "./lite_cnacc_data.tmp"
-    awk 'NR == FNR { tmp[$0] = 1 } NR > FNR { if ( tmp[$0] != 1 ) print }' "./gfwlist_subtraction.tmp" "./lite_gfwlist_added.tmp" > "./lite_gfwlist_data.tmp"
+    cat "./Temp/gfwlist2agh_modify.tmp" | grep -v "\#" | grep "\(\@\%\@\)\|\(\@\%\!\)\|\(\!\&\@\)\|\(\@\@\@\)" | tr -d "\!\%\&\(\)\*\@" | grep -E "${domain_regex}" | sort | uniq > "./Temp/cnacc_addition.tmp"
+    cat "./Temp/gfwlist2agh_modify.tmp" | grep -v "\#" | grep "\(\!\%\!\)\|\(\@\&\!\)\|\(\!\%\@\)\|\(\!\!\!\)" | tr -d "\!\%\&\(\)\*\@" | grep -E "${domain_regex}" | sort | uniq > "./Temp/cnacc_subtraction.tmp"
+    cat "./Temp/gfwlist2agh_modify.tmp" | grep -v "\#" | grep "\(\*\%\*\)\|\(\*\*\*\)" | tr -d "\!\%\&\(\)\*\@" | grep -E "${domain_regex}" | xargs | sed "s/\ /\|/g" | sort | uniq > "./Temp/cnacc_exclusion.tmp"
+    cat "./Temp/gfwlist2agh_modify.tmp" | grep -v "\#" | grep "\(\*\%\*\)\|\(\*\*\*\)" | tr -d "\!\%\&\(\)\*\@" | grep -E "${lite_domain_regex}" | xargs | sed "s/\ /\|/g" | sort | uniq > "./Temp/lite_cnacc_exclusion.tmp"
+    cat "./Temp/gfwlist2agh_modify.tmp" | grep -v "\#" | grep "\(\!\%\*\)\|\(\!\*\*\)" | tr -d "\!\%\&\(\)\*\@" | grep -E "${domain_regex}" | xargs | sed "s/\ /\|/g" | sort | uniq > "./Temp/cnacc_keyword.tmp"
+    cat "./Temp/gfwlist2agh_modify.tmp" | grep -v "\#" | grep "\(\!\%\*\)\|\(\!\*\*\)" | tr -d "\!\%\&\(\)\*\@" | grep -E "${lite_domain_regex}" | xargs | sed "s/\ /\|/g" | sort | uniq > "./Temp/lite_cnacc_keyword.tmp"
+    cat "./Temp/gfwlist2agh_modify.tmp" | grep -v "\#" | grep "\(\@\&\@\)\|\(\@\&\!\)\|\(\!\%\@\)\|\(\@\@\@\)" | tr -d "\!\%\&\(\)\*\@" | grep -E "${domain_regex}" | sort | uniq > "./Temp/gfwlist_addition.tmp"
+    cat "./Temp/gfwlist2agh_modify.tmp" | grep -v "\#" | grep "\(\!\&\!\)\|\(\@\%\!\)\|\(\!\&\@\)\|\(\!\!\!\)" | tr -d "\!\%\&\(\)\*\@" | grep -E "${domain_regex}" | sort | uniq > "./Temp/gfwlist_subtraction.tmp"
+    cat "./Temp/gfwlist2agh_modify.tmp" | grep -v "\#" | grep "\(\*\&\*\)\|\(\*\*\*\)" | tr -d "\!\%\&\(\)\*\@" | grep -E "${domain_regex}" | xargs | sed "s/\ /\|/g" | sort | uniq > "./Temp/gfwlist_exclusion.tmp"
+    cat "./Temp/gfwlist2agh_modify.tmp" | grep -v "\#" | grep "\(\*\&\*\)\|\(\*\*\*\)" | tr -d "\!\%\&\(\)\*\@" | grep -E "${lite_domain_regex}" | xargs | sed "s/\ /\|/g" | sort | uniq > "./Temp/lite_gfwlist_exclusion.tmp"
+    cat "./Temp/gfwlist2agh_modify.tmp" | grep -v "\#" | grep "\(\!\&\*\)\|\(\!\*\*\)" | tr -d "\!\%\&\(\)\*\@" | grep -E "${domain_regex}" | xargs | sed "s/\ /\|/g" | sort | uniq > "./Temp/gfwlist_keyword.tmp"
+    cat "./Temp/gfwlist2agh_modify.tmp" | grep -v "\#" | grep "\(\!\&\*\)\|\(\!\*\*\)" | tr -d "\!\%\&\(\)\*\@" | grep -E "${lite_domain_regex}" | xargs | sed "s/\ /\|/g" | sort | uniq > "./Temp/lite_gfwlist_keyword.tmp"
+    
+    cat "./Temp/cnacc_addition.tmp" | grep -E "${lite_domain_regex}" | sort | uniq > "./Temp/lite_cnacc_addition.tmp"
+    cat "./Temp/gfwlist_addition.tmp" | grep -E "${lite_domain_regex}" | sort | uniq > "./Temp/lite_gfwlist_addition.tmp"
+    
+    cat "./Temp/cnacc_trusted.tmp" | sed "s/\/114\.114\.114\.114//g;s/server\=\///g" | tr "A-Z" "a-z" | grep -E "${domain_regex}" | sort | uniq > "./Temp/cnacc_trust.tmp"
+    cat "./Temp/cnacc_trust.tmp" | grep -E "${lite_domain_regex}" | sort | uniq > "./Temp/lite_cnacc_trust.tmp"
+    
+    cat "./Temp/cnacc_domain.tmp" | sed "s/domain\://g;s/full\://g" | tr "A-Z" "a-z" | grep -E "${domain_regex}" | sort | uniq > "./Temp/cnacc_checklist.tmp"
+    cat "./Temp/gfwlist_domain.tmp" | sed "s/domain\://g;s/full\://g;s/http\:\/\///g;s/https\:\/\///g" | tr -d "|" | tr "A-Z" "a-z" | grep -E "${domain_regex}" | sort | uniq > "./Temp/gfwlist_checklist.tmp"
+    
+    cat "./Temp/cnacc_checklist.tmp" | rev | cut -d "." -f 1,2 | rev | sort | uniq > "./Temp/lite_cnacc_checklist.tmp"
+    cat "./Temp/gfwlist_checklist.tmp" | rev | cut -d "." -f 1,2 | rev | sort | uniq > "./Temp/lite_gfwlist_checklist.tmp"
+    
+    awk 'NR == FNR { tmp[$0] = 1 } NR > FNR { if ( tmp[$0] != 1 ) print }' "./Temp/cnacc_checklist.tmp" "./Temp/gfwlist_checklist.tmp" > "./Temp/gfwlist_raw.tmp"
+    awk 'NR == FNR { tmp[$0] = 1 } NR > FNR { if ( tmp[$0] != 1 ) print }' "./Temp/gfwlist_checklist.tmp" "./Temp/cnacc_checklist.tmp" | grep -Ev "(\.($(cat './Temp/cnacc_exclusion.tmp'))$)|(^$(cat './Temp/cnacc_exclusion.tmp')$)|($(cat './Temp/cnacc_keyword.tmp'))" > "./Temp/cnacc_raw.tmp"
+    awk 'NR == FNR { tmp[$0] = 1 } NR > FNR { if ( tmp[$0] != 1 ) print }' "./Temp/lite_cnacc_checklist.tmp" "./Temp/lite_gfwlist_checklist.tmp" > "./Temp/lite_gfwlist_raw.tmp"
+    awk 'NR == FNR { tmp[$0] = 1 } NR > FNR { if ( tmp[$0] != 1 ) print }' "./Temp/lite_gfwlist_checklist.tmp" "./Temp/lite_cnacc_checklist.tmp" | grep -Ev "(\.($(cat './Temp/lite_cnacc_exclusion.tmp'))$)|(^$(cat './Temp/lite_cnacc_exclusion.tmp')$)|($(cat './Temp/lite_cnacc_keyword.tmp'))" > "./Temp/lite_cnacc_raw.tmp"
+    
+    awk 'NR == FNR { tmp[$0] = 1 } NR > FNR { if ( tmp[$0] != 1 ) print }' "./Temp/cnacc_trust.tmp" "./Temp/gfwlist_raw.tmp" | grep -Ev "(\.($(cat './Temp/gfwlist_exclusion.tmp'))$)|(^$(cat './Temp/gfwlist_exclusion.tmp')$)|($(cat './Temp/gfwlist_keyword.tmp'))" > "./Temp/gfwlist_raw_new.tmp"
+    awk 'NR == FNR { tmp[$0] = 1 } NR > FNR { if ( tmp[$0] != 1 ) print }' "./Temp/cnacc_trust.tmp" "./Temp/lite_gfwlist_raw.tmp" | grep -Ev "(\.($(cat './Temp/lite_gfwlist_exclusion.tmp'))$)|(^$(cat './Temp/lite_gfwlist_exclusion.tmp')$)|($(cat './Temp/lite_gfwlist_keyword.tmp'))" > "./Temp/lite_gfwlist_raw_new.tmp"
+    
+    cat "./Temp/cnacc_raw.tmp" "./Temp/lite_cnacc_raw.tmp" "./Temp/cnacc_addition.tmp" "./Temp/lite_cnacc_addition.tmp" "./Temp/cnacc_trust.tmp" "./Temp/lite_cnacc_trust.tmp" | sort | uniq > "./Temp/cnacc_added.tmp"
+    cat "./Temp/gfwlist_raw_new.tmp" "./Temp/lite_gfwlist_raw_new.tmp" "./Temp/gfwlist_addition.tmp" "./Temp/lite_gfwlist_addition.tmp" | sort | uniq > "./Temp/gfwlist_added.tmp"
+    
+    cat "./Temp/lite_cnacc_raw.tmp" "./Temp/lite_cnacc_addition.tmp" "./Temp/lite_cnacc_trust.tmp" | sort | uniq > "./Temp/lite_cnacc_added.tmp"
+    cat "./Temp/lite_gfwlist_raw_new.tmp" "./Temp/lite_gfwlist_addition.tmp" | sort | uniq > "./Temp/lite_gfwlist_added.tmp"
+    
+    awk 'NR == FNR { tmp[$0] = 1 } NR > FNR { if ( tmp[$0] != 1 ) print }' "./Temp/cnacc_subtraction.tmp" "./Temp/cnacc_added.tmp" > "./Temp/cnacc_data.tmp"
+    awk 'NR == FNR { tmp[$0] = 1 } NR > FNR { if ( tmp[$0] != 1 ) print }' "./Temp/gfwlist_subtraction.tmp" "./Temp/gfwlist_added.tmp" > "./Temp/gfwlist_data.tmp"
+    awk 'NR == FNR { tmp[$0] = 1 } NR > FNR { if ( tmp[$0] != 1 ) print }' "./Temp/cnacc_subtraction.tmp" "./Temp/lite_cnacc_added.tmp" > "./Temp/lite_cnacc_data.tmp"
+    awk 'NR == FNR { tmp[$0] = 1 } NR > FNR { if ( tmp[$0] != 1 ) print }' "./Temp/gfwlist_subtraction.tmp" "./Temp/lite_gfwlist_added.tmp" > "./Temp/lite_gfwlist_data.tmp"
 
     # Populate shell arrays with the final domain lists
-    cnacc_data=($(cat "./cnacc_data.tmp" "./lite_cnacc_data.tmp" | sort | uniq | awk "{ print $0 }"))
-    gfwlist_data=($(cat "./gfwlist_data.tmp" "./lite_gfwlist_data.tmp" | sort | uniq | awk "{ print $0 }"))
-    lite_cnacc_data=($(cat "./lite_cnacc_data.tmp" | sort | uniq | awk "{ print $0 }"))
-    lite_gfwlist_data=($(cat "./lite_gfwlist_data.tmp" | sort | uniq | awk "{ print $0 }"))
+    cnacc_data=($(cat "./Temp/cnacc_data.tmp" "./Temp/lite_cnacc_data.tmp" | sort | uniq | awk "{ print $0 }"))
+    gfwlist_data=($(cat "./Temp/gfwlist_data.tmp" "./Temp/lite_gfwlist_data.tmp" | sort | uniq | awk "{ print $0 }"))
+    lite_cnacc_data=($(cat "./Temp/lite_cnacc_data.tmp" | sort | uniq | awk "{ print $0 }"))
+    lite_gfwlist_data=($(cat "./Temp/lite_gfwlist_data.tmp" | sort | uniq | awk "{ print $0 }"))
     echo "数据分析完成。"
 }
 
@@ -131,12 +141,13 @@ function GenerateRules() {
             file_extension="dev" 
         fi
 
-        if [ ! -d "../gfwlist2${software_name}" ]; then
-            mkdir "../gfwlist2${software_name}"
+        # Output directories are relative to script execution root
+        if [ ! -d "./gfwlist2${software_name}" ]; then
+            mkdir -p "./gfwlist2${software_name}"
         fi
 
         file_name="${generate_temp}list_${generate_mode}.${file_extension}"
-        file_path="../gfwlist2${software_name}/${file_name}"
+        file_path="./gfwlist2${software_name}/${file_name}"
         > "${file_path}"
     }
 
@@ -403,9 +414,9 @@ function OutputData() {
     software_name="unbound" && generate_file="white" && generate_mode="full" && dns_mode="domestic" && GenerateRules
     software_name="unbound" && generate_file="white" && generate_mode="lite" && dns_mode="domestic" && GenerateRules
 
-    cd .. && rm -rf ./Temp
+    # cd .. && rm -rf ./Temp # Removed from here
     echo "GFWList2AGH 脚本已完成规则生成。"
-    exit 0
+    # exit 0 # exit 0 is fine here if this is the last function in the main flow before script end
 }
 
 ## Process
@@ -425,3 +436,8 @@ echo "--------------"
 
 # Call OutputData
 OutputData
+
+# Clean up Temp directory at the end of the script
+rm -rf ./Temp
+echo "临时目录 ./Temp 已清理。"
+exit 0
