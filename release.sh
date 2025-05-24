@@ -66,8 +66,10 @@ function AnalyseData() {
     set -x # Enable command tracing
     echo "开始分析数据..."
     # Define domain regex patterns
-    domain_regex="^(([a-z]{1})|([a-z]{1}[a-z]{1})|([a-z]{1}[0-9]{1})|([0-9]{1}[a-z]{1})|([a-z0-9][-\.a-z0-9]{1,61}[a-z0-9]))\.([a-z]{2,13}|[a-z0-9-]{2,30}\.[a-z]{2,3})$"
-    lite_domain_regex="^([a-z]{2,13}|[a-z0-9-]{2,30}\.[a-z]{2,3})$"
+    # This regex is crucial. If it's too strict, it might filter out valid domains from the input lists.
+    # For example, it expects a structure like label.tld or label.country.tld and might not handle all subdomain levels well.
+    domain_regex="^([a-z0-9]+(-[a-z0-9]+)*\.)+[a-z]{2,}$" # More permissive regex for full domain names
+    lite_domain_regex="^([a-z]{2,13}|[a-z0-9-]{2,30}\.[a-z]{2,3})$" # For TLDs or SLD.TLD
 
     # Process gfwlist2agh_modify.tmp to extract various modification rules
     cat "./Temp/gfwlist2agh_modify.tmp" | grep -v "\#" | grep "\(\@\%\@\)\|\(\@\%\!\)\|\(\!\&\@\)\|\(\@\@\@\)" | tr -d "\!\%\&\(\)\*\@" | grep -E "${domain_regex}" | sort | uniq > "./Temp/cnacc_addition.tmp"
@@ -89,16 +91,15 @@ function AnalyseData() {
     cat "./Temp/cnacc_trusted.tmp" | sed "s/\/114\.114\.114\.114//g;s/server\=\///g" | tr "A-Z" "a-z" | grep -E "${domain_regex}" | sort | uniq > "./Temp/cnacc_trust.tmp"
     cat "./Temp/cnacc_trust.tmp" | grep -E "${lite_domain_regex}" | sort | uniq > "./Temp/lite_cnacc_trust.tmp"
     
+    # Using the redefined, more permissive domain_regex for initial checklist creation
     cat "./Temp/cnacc_domain.tmp" | sed "s/domain\://g;s/full\://g" | tr "A-Z" "a-z" | grep -E "${domain_regex}" | sort | uniq > "./Temp/cnacc_checklist.tmp"
     cat "./Temp/gfwlist_domain.tmp" | sed "s/domain\://g;s/full\://g;s/http\:\/\///g;s/https\:\/\///g" | tr -d "|" | tr "A-Z" "a-z" | grep -E "${domain_regex}" | sort | uniq > "./Temp/gfwlist_checklist.tmp"
     
     cat "./Temp/cnacc_checklist.tmp" | rev | cut -d "." -f 1,2 | rev | sort | uniq > "./Temp/lite_cnacc_checklist.tmp"
     cat "./Temp/gfwlist_checklist.tmp" | rev | cut -d "." -f 1,2 | rev | sort | uniq > "./Temp/lite_gfwlist_checklist.tmp"
     
-    # Generate raw GFW list (domains in gfwlist_checklist but not in cnacc_checklist)
     awk 'NR == FNR { tmp[$0] = 1 } NR > FNR { if ( tmp[$0] != 1 ) print }' "./Temp/cnacc_checklist.tmp" "./Temp/gfwlist_checklist.tmp" > "./Temp/gfwlist_raw.tmp"
 
-    # Generate raw CNACC list (domains in cnacc_checklist but not in gfwlist_checklist), apply exclusions and keyword filters
     awk_output_cnacc_raw=$(awk 'NR == FNR { tmp[$0] = 1 } NR > FNR { if ( tmp[$0] != 1 ) print }' "./Temp/gfwlist_checklist.tmp" "./Temp/cnacc_checklist.tmp")
     cnacc_excl_pats=$(cat "./Temp/cnacc_exclusion.tmp")
     cnacc_key_pats=$(cat "./Temp/cnacc_keyword.tmp")
@@ -107,9 +108,8 @@ function AnalyseData() {
     if [ -n "$cnacc_key_pats" ]; then
         if [ -n "$final_grep_pattern_cnacc" ]; then final_grep_pattern_cnacc="${final_grep_pattern_cnacc}|(${cnacc_key_pats})"; else final_grep_pattern_cnacc="(${cnacc_key_pats})"; fi
     fi
-    if [ -n "$final_grep_pattern_cnacc" ]; then echo "$awk_output_cnacc_raw" | grep -Ev "$final_grep_pattern_cnacc" > "./Temp/cnacc_raw.tmp"; else echo "$awk_output_cnacc_raw" > "./Temp/cnacc_raw.tmp"; fi
+    if [ -n "$final_grep_pattern_cnacc" ]; then printf "%s\n" "$awk_output_cnacc_raw" | grep -Ev "$final_grep_pattern_cnacc" > "./Temp/cnacc_raw.tmp"; else printf "%s\n" "$awk_output_cnacc_raw" > "./Temp/cnacc_raw.tmp"; fi
 
-    # Generate lite versions of raw lists
     awk 'NR == FNR { tmp[$0] = 1 } NR > FNR { if ( tmp[$0] != 1 ) print }' "./Temp/lite_cnacc_checklist.tmp" "./Temp/lite_gfwlist_checklist.tmp" > "./Temp/lite_gfwlist_raw.tmp"
     
     awk_output_lite_cnacc_raw=$(awk 'NR == FNR { tmp[$0] = 1 } NR > FNR { if ( tmp[$0] != 1 ) print }' "./Temp/lite_gfwlist_checklist.tmp" "./Temp/lite_cnacc_checklist.tmp")
@@ -120,9 +120,8 @@ function AnalyseData() {
     if [ -n "$lite_cnacc_key_pats" ]; then
         if [ -n "$final_grep_pattern_lite_cnacc" ]; then final_grep_pattern_lite_cnacc="${final_grep_pattern_lite_cnacc}|(${lite_cnacc_key_pats})"; else final_grep_pattern_lite_cnacc="(${lite_cnacc_key_pats})"; fi
     fi
-    if [ -n "$final_grep_pattern_lite_cnacc" ]; then echo "$awk_output_lite_cnacc_raw" | grep -Ev "$final_grep_pattern_lite_cnacc" > "./Temp/lite_cnacc_raw.tmp"; else echo "$awk_output_lite_cnacc_raw" > "./Temp/lite_cnacc_raw.tmp"; fi
+    if [ -n "$final_grep_pattern_lite_cnacc" ]; then printf "%s\n" "$awk_output_lite_cnacc_raw" | grep -Ev "$final_grep_pattern_lite_cnacc" > "./Temp/lite_cnacc_raw.tmp"; else printf "%s\n" "$awk_output_lite_cnacc_raw" > "./Temp/lite_cnacc_raw.tmp"; fi
 
-    # Refine GFW list by removing trusted CNACC domains and applying GFW exclusions/keywords
     awk_output_gfwlist_raw=$(awk 'NR == FNR { tmp[$0] = 1 } NR > FNR { if ( tmp[$0] != 1 ) print }' "./Temp/cnacc_trust.tmp" "./Temp/gfwlist_raw.tmp")
     gfwlist_excl_pats=$(cat "./Temp/gfwlist_exclusion.tmp")
     gfwlist_key_pats=$(cat "./Temp/gfwlist_keyword.tmp")
@@ -131,7 +130,7 @@ function AnalyseData() {
     if [ -n "$gfwlist_key_pats" ]; then
         if [ -n "$final_grep_pattern_gfwlist" ]; then final_grep_pattern_gfwlist="${final_grep_pattern_gfwlist}|(${gfwlist_key_pats})"; else final_grep_pattern_gfwlist="(${gfwlist_key_pats})"; fi
     fi
-    if [ -n "$final_grep_pattern_gfwlist" ]; then echo "$awk_output_gfwlist_raw" | grep -Ev "$final_grep_pattern_gfwlist" > "./Temp/gfwlist_raw_new.tmp"; else echo "$awk_output_gfwlist_raw" > "./Temp/gfwlist_raw_new.tmp"; fi
+    if [ -n "$final_grep_pattern_gfwlist" ]; then printf "%s\n" "$awk_output_gfwlist_raw" | grep -Ev "$final_grep_pattern_gfwlist" > "./Temp/gfwlist_raw_new.tmp"; else printf "%s\n" "$awk_output_gfwlist_raw" > "./Temp/gfwlist_raw_new.tmp"; fi
     
     awk_output_lite_gfwlist_raw=$(awk 'NR == FNR { tmp[$0] = 1 } NR > FNR { if ( tmp[$0] != 1 ) print }' "./Temp/cnacc_trust.tmp" "./Temp/lite_gfwlist_raw.tmp")
     lite_gfwlist_excl_pats=$(cat "./Temp/lite_gfwlist_exclusion.tmp")
@@ -141,7 +140,7 @@ function AnalyseData() {
     if [ -n "$lite_gfwlist_key_pats" ]; then
         if [ -n "$final_grep_pattern_lite_gfwlist" ]; then final_grep_pattern_lite_gfwlist="${final_grep_pattern_lite_gfwlist}|(${lite_gfwlist_key_pats})"; else final_grep_pattern_lite_gfwlist="(${lite_gfwlist_key_pats})"; fi
     fi
-    if [ -n "$final_grep_pattern_lite_gfwlist" ]; then echo "$awk_output_lite_gfwlist_raw" | grep -Ev "$final_grep_pattern_lite_gfwlist" > "./Temp/lite_gfwlist_raw_new.tmp"; else echo "$awk_output_lite_gfwlist_raw" > "./Temp/lite_gfwlist_raw_new.tmp"; fi
+    if [ -n "$final_grep_pattern_lite_gfwlist" ]; then printf "%s\n" "$awk_output_lite_gfwlist_raw" | grep -Ev "$final_grep_pattern_lite_gfwlist" > "./Temp/lite_gfwlist_raw_new.tmp"; else printf "%s\n" "$awk_output_lite_gfwlist_raw" > "./Temp/lite_gfwlist_raw_new.tmp"; fi
     
     cat "./Temp/cnacc_raw.tmp" "./Temp/lite_cnacc_raw.tmp" "./Temp/cnacc_addition.tmp" "./Temp/lite_cnacc_addition.tmp" "./Temp/cnacc_trust.tmp" "./Temp/lite_cnacc_trust.tmp" | sort | uniq > "./Temp/cnacc_added.tmp"
     cat "./Temp/gfwlist_raw_new.tmp" "./Temp/lite_gfwlist_raw_new.tmp" "./Temp/gfwlist_addition.tmp" "./Temp/lite_gfwlist_addition.tmp" | sort | uniq > "./Temp/gfwlist_added.tmp"
@@ -154,11 +153,25 @@ function AnalyseData() {
     awk 'NR == FNR { tmp[$0] = 1 } NR > FNR { if ( tmp[$0] != 1 ) print }' "./Temp/cnacc_subtraction.tmp" "./Temp/lite_cnacc_added.tmp" > "./Temp/lite_cnacc_data.tmp"
     awk 'NR == FNR { tmp[$0] = 1 } NR > FNR { if ( tmp[$0] != 1 ) print }' "./Temp/gfwlist_subtraction.tmp" "./Temp/lite_gfwlist_added.tmp" > "./Temp/lite_gfwlist_data.tmp"
 
-    # Populate shell arrays with the final domain lists
-    cnacc_data=($(cat "./Temp/cnacc_data.tmp" "./Temp/lite_cnacc_data.tmp" 2>/dev/null | sort | uniq | awk "{ print $0 }"))
-    gfwlist_data=($(cat "./Temp/gfwlist_data.tmp" "./Temp/lite_gfwlist_data.tmp" 2>/dev/null | sort | uniq | awk "{ print $0 }"))
-    lite_cnacc_data=($(cat "./Temp/lite_cnacc_data.tmp" 2>/dev/null | sort | uniq | awk "{ print $0 }"))
-    lite_gfwlist_data=($(cat "./Temp/lite_gfwlist_data.tmp" 2>/dev/null | sort | uniq | awk "{ print $0 }"))
+    echo "调试: 各 *_data.tmp 文件行数:"
+    wc -l ./Temp/cnacc_data.tmp || echo "./Temp/cnacc_data.tmp 不存在或为空"
+    wc -l ./Temp/lite_cnacc_data.tmp || echo "./Temp/lite_cnacc_data.tmp 不存在或为空"
+    wc -l ./Temp/gfwlist_data.tmp || echo "./Temp/gfwlist_data.tmp 不存在或为空"
+    wc -l ./Temp/lite_gfwlist_data.tmp || echo "./Temp/lite_gfwlist_data.tmp 不存在或为空"
+
+    # Populate shell arrays with the final domain lists using mapfile for robustness
+    mapfile -t cnacc_data_temp < <(cat "./Temp/cnacc_data.tmp" "./Temp/lite_cnacc_data.tmp" | sort -u)
+    cnacc_data=("${cnacc_data_temp[@]}")
+    
+    mapfile -t gfwlist_data_temp < <(cat "./Temp/gfwlist_data.tmp" "./Temp/lite_gfwlist_data.tmp" | sort -u)
+    gfwlist_data=("${gfwlist_data_temp[@]}")
+    
+    mapfile -t lite_cnacc_data_temp < <(cat "./Temp/lite_cnacc_data.tmp" | sort -u)
+    lite_cnacc_data=("${lite_cnacc_data_temp[@]}")
+    
+    mapfile -t lite_gfwlist_data_temp < <(cat "./Temp/lite_gfwlist_data.tmp" | sort -u)
+    lite_gfwlist_data=("${lite_gfwlist_data_temp[@]}")
+    
     echo "数据分析完成。"
     set +x # Disable command tracing
 }
@@ -190,7 +203,7 @@ function GenerateRules() {
 
         file_name="${generate_temp}list_${generate_mode}.${file_extension}"
         file_path="./gfwlist2${software_name}/${file_name}"
-        > "${file_path}"
+        > "${file_path}" # Ensure the file is empty before writing
     }
 
     function GenerateDefaultUpstream() {
@@ -219,7 +232,7 @@ function GenerateRules() {
                 fi
             ;;
             *)
-                return 0
+                return 0 # No default upstream for other software types in this function
             ;;
         esac
     }
@@ -245,7 +258,7 @@ function GenerateRules() {
                 fi
             }
             function GenerateRulesFooter() {
-                sed -i 's/\/$//' "${file_path}" 
+                sed -i 's/\/$//' "${file_path}" # Remove trailing slash if any domains were added
                 if [ "${dns_mode}" == "default" ]; then echo -e "]#" >> "${file_path}";
                 elif [ "${dns_mode}" == "domestic" ]; then echo -e "]${domestic_dns[0]}" >> "${file_path}"; 
                 elif [ "${dns_mode}" == "foreign" ]; then echo -e "]${foreign_dns[0]}" >> "${file_path}"; fi
@@ -260,7 +273,7 @@ function GenerateRules() {
                     elif { [ "${generate_file}" == "white" ] || [ "${generate_file}" == "whiteblack" ]; } && [ ${#lite_cnacc_data[@]} -gt 0 ]; then domain_count=${#lite_cnacc_data[@]}; fi
                 fi
                 if [ ${domain_count} -gt 0 ]; then GenerateRulesHeader; GenerateRulesBody; GenerateRulesFooter;
-                else if ! grep -qE 'tls://|https://' "${file_path}"; then > "${file_path}"; fi; fi
+                else if ! grep -qE 'tls://|https://' "${file_path}"; then > "${file_path}"; fi; fi # Avoid creating empty rule files unless they contain default upstreams
             }
             FileName 
             if [[ "${generate_mode}" == "full_combine" || "${generate_mode}" == "lite_combine" ]]; then GenerateDefaultUpstream; GenerateRulesProcess;
@@ -287,7 +300,7 @@ function GenerateRules() {
                 fi
             }
             function GenerateRulesFooter() {
-                sed -i 's/\/$//' "${file_path}" 
+                sed -i 's/\/$//' "${file_path}" # Remove trailing slash if any domains were added
                 if [ "${dns_mode}" == "default" ]; then echo -e "]#" >> "${file_path}";
                 elif [ "${dns_mode}" == "domestic" ]; then echo -e "]${domestic_dns[*]}" >> "${file_path}";
                 elif [ "${dns_mode}" == "foreign" ]; then echo -e "]${foreign_dns[*]}" >> "${file_path}"; fi
@@ -456,9 +469,7 @@ function OutputData() {
     software_name="unbound" && generate_file="white" && generate_mode="full" && dns_mode="domestic" && GenerateRules
     software_name="unbound" && generate_file="white" && generate_mode="lite" && dns_mode="domestic" && GenerateRules
 
-    # cd .. && rm -rf ./Temp # Removed from here
     echo "GFWList2AGH 脚本已完成规则生成。"
-    # exit 0 # exit 0 is fine here if this is the last function in the main flow before script end
 }
 
 ## Process
