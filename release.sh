@@ -27,7 +27,7 @@ function GetData() {
     )
     # Array of URLs for custom modification data for this script
     gfwlist2agh_modify=(
-        "https://raw.githubusercontent.com/hezhijie0327/GFWList2AGH/source/data/data_modify.txt"
+        "https://raw.githubusercontent.com/jqyisbest/GFWList2AGH/source/data/data_modify.txt"
     )
 
     # Remove any existing temporary files/directories and create a new Temp directory
@@ -107,7 +107,7 @@ function AnalyseData() {
 
     # Process cnacc_domain lists
     cat "./cnacc_domain.tmp" | sed "s/domain\://g;s/full\://g" | tr "A-Z" "a-z" | grep -E "${domain_regex}" | sort | uniq > "./cnacc_checklist.tmp"
-    # Process gfwlist (domain) lists - 移除了 gfwlist_base64.tmp
+    # Process gfwlist (domain) lists - 移除了 gfwlist_.tmp
     cat "./gfwlist_domain.tmp" | sed "s/domain\://g;s/full\://g;s/http\:\/\///g;s/https\:\/\///g" | tr -d "|" | tr "A-Z" "a-z" | grep -E "${domain_regex}" | sort | uniq > "./gfwlist_checklist.tmp"
 
     # Create lite versions of checklist files (extracting second-level domains)
