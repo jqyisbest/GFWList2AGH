@@ -3,7 +3,7 @@ name: Build Rules & Release to Main (jqyisbest/GFWList2AGH)
 on:
     workflow_dispatch:
     schedule:
-        - cron: "0 0 * * *"
+        - cron: '05 19 * * *' # UTC+8，实际是北京时间凌晨03:05
 
 jobs:
     build_and_release:
