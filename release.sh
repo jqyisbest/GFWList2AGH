@@ -94,13 +94,53 @@ function AnalyseData() {
     cat "./Temp/cnacc_checklist.tmp" | rev | cut -d "." -f 1,2 | rev | sort | uniq > "./Temp/lite_cnacc_checklist.tmp"
     cat "./Temp/gfwlist_checklist.tmp" | rev | cut -d "." -f 1,2 | rev | sort | uniq > "./Temp/lite_gfwlist_checklist.tmp"
     
+    # Generate raw GFW list (domains in gfwlist_checklist but not in cnacc_checklist)
     awk 'NR == FNR { tmp[$0] = 1 } NR > FNR { if ( tmp[$0] != 1 ) print }' "./Temp/cnacc_checklist.tmp" "./Temp/gfwlist_checklist.tmp" > "./Temp/gfwlist_raw.tmp"
-    awk 'NR == FNR { tmp[$0] = 1 } NR > FNR { if ( tmp[$0] != 1 ) print }' "./Temp/gfwlist_checklist.tmp" "./Temp/cnacc_checklist.tmp" | grep -Ev "(\.($(cat './Temp/cnacc_exclusion.tmp'))$)|(^$(cat './Temp/cnacc_exclusion.tmp')$)|($(cat './Temp/cnacc_keyword.tmp'))" > "./Temp/cnacc_raw.tmp"
+
+    # Generate raw CNACC list (domains in cnacc_checklist but not in gfwlist_checklist), apply exclusions and keyword filters
+    awk_output_cnacc_raw=$(awk 'NR == FNR { tmp[$0] = 1 } NR > FNR { if ( tmp[$0] != 1 ) print }' "./Temp/gfwlist_checklist.tmp" "./Temp/cnacc_checklist.tmp")
+    cnacc_excl_pats=$(cat "./Temp/cnacc_exclusion.tmp")
+    cnacc_key_pats=$(cat "./Temp/cnacc_keyword.tmp")
+    final_grep_pattern_cnacc=""
+    if [ -n "$cnacc_excl_pats" ]; then final_grep_pattern_cnacc="(\\.(${cnacc_excl_pats})$)|(^(${cnacc_excl_pats})$)"; fi
+    if [ -n "$cnacc_key_pats" ]; then
+        if [ -n "$final_grep_pattern_cnacc" ]; then final_grep_pattern_cnacc="${final_grep_pattern_cnacc}|(${cnacc_key_pats})"; else final_grep_pattern_cnacc="(${cnacc_key_pats})"; fi
+    fi
+    if [ -n "$final_grep_pattern_cnacc" ]; then echo "$awk_output_cnacc_raw" | grep -Ev "$final_grep_pattern_cnacc" > "./Temp/cnacc_raw.tmp"; else echo "$awk_output_cnacc_raw" > "./Temp/cnacc_raw.tmp"; fi
+
+    # Generate lite versions of raw lists
     awk 'NR == FNR { tmp[$0] = 1 } NR > FNR { if ( tmp[$0] != 1 ) print }' "./Temp/lite_cnacc_checklist.tmp" "./Temp/lite_gfwlist_checklist.tmp" > "./Temp/lite_gfwlist_raw.tmp"
-    awk 'NR == FNR { tmp[$0] = 1 } NR > FNR { if ( tmp[$0] != 1 ) print }' "./Temp/lite_gfwlist_checklist.tmp" "./Temp/lite_cnacc_checklist.tmp" | grep -Ev "(\.($(cat './Temp/lite_cnacc_exclusion.tmp'))$)|(^$(cat './Temp/lite_cnacc_exclusion.tmp')$)|($(cat './Temp/lite_cnacc_keyword.tmp'))" > "./Temp/lite_cnacc_raw.tmp"
     
-    awk 'NR == FNR { tmp[$0] = 1 } NR > FNR { if ( tmp[$0] != 1 ) print }' "./Temp/cnacc_trust.tmp" "./Temp/gfwlist_raw.tmp" | grep -Ev "(\.($(cat './Temp/gfwlist_exclusion.tmp'))$)|(^$(cat './Temp/gfwlist_exclusion.tmp')$)|($(cat './Temp/gfwlist_keyword.tmp'))" > "./Temp/gfwlist_raw_new.tmp"
-    awk 'NR == FNR { tmp[$0] = 1 } NR > FNR { if ( tmp[$0] != 1 ) print }' "./Temp/cnacc_trust.tmp" "./Temp/lite_gfwlist_raw.tmp" | grep -Ev "(\.($(cat './Temp/lite_gfwlist_exclusion.tmp'))$)|(^$(cat './Temp/lite_gfwlist_exclusion.tmp')$)|($(cat './Temp/lite_gfwlist_keyword.tmp'))" > "./Temp/lite_gfwlist_raw_new.tmp"
+    awk_output_lite_cnacc_raw=$(awk 'NR == FNR { tmp[$0] = 1 } NR > FNR { if ( tmp[$0] != 1 ) print }' "./Temp/lite_gfwlist_checklist.tmp" "./Temp/lite_cnacc_checklist.tmp")
+    lite_cnacc_excl_pats=$(cat "./Temp/lite_cnacc_exclusion.tmp")
+    lite_cnacc_key_pats=$(cat "./Temp/lite_cnacc_keyword.tmp")
+    final_grep_pattern_lite_cnacc=""
+    if [ -n "$lite_cnacc_excl_pats" ]; then final_grep_pattern_lite_cnacc="(\\.(${lite_cnacc_excl_pats})$)|(^(${lite_cnacc_excl_pats})$)"; fi
+    if [ -n "$lite_cnacc_key_pats" ]; then
+        if [ -n "$final_grep_pattern_lite_cnacc" ]; then final_grep_pattern_lite_cnacc="${final_grep_pattern_lite_cnacc}|(${lite_cnacc_key_pats})"; else final_grep_pattern_lite_cnacc="(${lite_cnacc_key_pats})"; fi
+    fi
+    if [ -n "$final_grep_pattern_lite_cnacc" ]; then echo "$awk_output_lite_cnacc_raw" | grep -Ev "$final_grep_pattern_lite_cnacc" > "./Temp/lite_cnacc_raw.tmp"; else echo "$awk_output_lite_cnacc_raw" > "./Temp/lite_cnacc_raw.tmp"; fi
+
+    # Refine GFW list by removing trusted CNACC domains and applying GFW exclusions/keywords
+    awk_output_gfwlist_raw=$(awk 'NR == FNR { tmp[$0] = 1 } NR > FNR { if ( tmp[$0] != 1 ) print }' "./Temp/cnacc_trust.tmp" "./Temp/gfwlist_raw.tmp")
+    gfwlist_excl_pats=$(cat "./Temp/gfwlist_exclusion.tmp")
+    gfwlist_key_pats=$(cat "./Temp/gfwlist_keyword.tmp")
+    final_grep_pattern_gfwlist=""
+    if [ -n "$gfwlist_excl_pats" ]; then final_grep_pattern_gfwlist="(\\.(${gfwlist_excl_pats})$)|(^(${gfwlist_excl_pats})$)"; fi
+    if [ -n "$gfwlist_key_pats" ]; then
+        if [ -n "$final_grep_pattern_gfwlist" ]; then final_grep_pattern_gfwlist="${final_grep_pattern_gfwlist}|(${gfwlist_key_pats})"; else final_grep_pattern_gfwlist="(${gfwlist_key_pats})"; fi
+    fi
+    if [ -n "$final_grep_pattern_gfwlist" ]; then echo "$awk_output_gfwlist_raw" | grep -Ev "$final_grep_pattern_gfwlist" > "./Temp/gfwlist_raw_new.tmp"; else echo "$awk_output_gfwlist_raw" > "./Temp/gfwlist_raw_new.tmp"; fi
+    
+    awk_output_lite_gfwlist_raw=$(awk 'NR == FNR { tmp[$0] = 1 } NR > FNR { if ( tmp[$0] != 1 ) print }' "./Temp/cnacc_trust.tmp" "./Temp/lite_gfwlist_raw.tmp")
+    lite_gfwlist_excl_pats=$(cat "./Temp/lite_gfwlist_exclusion.tmp")
+    lite_gfwlist_key_pats=$(cat "./Temp/lite_gfwlist_keyword.tmp")
+    final_grep_pattern_lite_gfwlist=""
+    if [ -n "$lite_gfwlist_excl_pats" ]; then final_grep_pattern_lite_gfwlist="(\\.(${lite_gfwlist_excl_pats})$)|(^(${lite_gfwlist_excl_pats})$)"; fi
+    if [ -n "$lite_gfwlist_key_pats" ]; then
+        if [ -n "$final_grep_pattern_lite_gfwlist" ]; then final_grep_pattern_lite_gfwlist="${final_grep_pattern_lite_gfwlist}|(${lite_gfwlist_key_pats})"; else final_grep_pattern_lite_gfwlist="(${lite_gfwlist_key_pats})"; fi
+    fi
+    if [ -n "$final_grep_pattern_lite_gfwlist" ]; then echo "$awk_output_lite_gfwlist_raw" | grep -Ev "$final_grep_pattern_lite_gfwlist" > "./Temp/lite_gfwlist_raw_new.tmp"; else echo "$awk_output_lite_gfwlist_raw" > "./Temp/lite_gfwlist_raw_new.tmp"; fi
     
     cat "./Temp/cnacc_raw.tmp" "./Temp/lite_cnacc_raw.tmp" "./Temp/cnacc_addition.tmp" "./Temp/lite_cnacc_addition.tmp" "./Temp/cnacc_trust.tmp" "./Temp/lite_cnacc_trust.tmp" | sort | uniq > "./Temp/cnacc_added.tmp"
     cat "./Temp/gfwlist_raw_new.tmp" "./Temp/lite_gfwlist_raw_new.tmp" "./Temp/gfwlist_addition.tmp" "./Temp/lite_gfwlist_addition.tmp" | sort | uniq > "./Temp/gfwlist_added.tmp"
@@ -114,10 +154,10 @@ function AnalyseData() {
     awk 'NR == FNR { tmp[$0] = 1 } NR > FNR { if ( tmp[$0] != 1 ) print }' "./Temp/gfwlist_subtraction.tmp" "./Temp/lite_gfwlist_added.tmp" > "./Temp/lite_gfwlist_data.tmp"
 
     # Populate shell arrays with the final domain lists
-    cnacc_data=($(cat "./Temp/cnacc_data.tmp" "./Temp/lite_cnacc_data.tmp" | sort | uniq | awk "{ print $0 }"))
-    gfwlist_data=($(cat "./Temp/gfwlist_data.tmp" "./Temp/lite_gfwlist_data.tmp" | sort | uniq | awk "{ print $0 }"))
-    lite_cnacc_data=($(cat "./Temp/lite_cnacc_data.tmp" | sort | uniq | awk "{ print $0 }"))
-    lite_gfwlist_data=($(cat "./Temp/lite_gfwlist_data.tmp" | sort | uniq | awk "{ print $0 }"))
+    cnacc_data=($(cat "./Temp/cnacc_data.tmp" "./Temp/lite_cnacc_data.tmp" 2>/dev/null | sort | uniq | awk "{ print $0 }"))
+    gfwlist_data=($(cat "./Temp/gfwlist_data.tmp" "./Temp/lite_gfwlist_data.tmp" 2>/dev/null | sort | uniq | awk "{ print $0 }"))
+    lite_cnacc_data=($(cat "./Temp/lite_cnacc_data.tmp" 2>/dev/null | sort | uniq | awk "{ print $0 }"))
+    lite_gfwlist_data=($(cat "./Temp/lite_gfwlist_data.tmp" 2>/dev/null | sort | uniq | awk "{ print $0 }"))
     echo "数据分析完成。"
 }
 
