@@ -1,8 +1,7 @@
 name: Build Rules & Release to Main (jqyisbest/GFWList2AGH)
 
 on:
-    push:
-        branches: [main]
+    workflow_dispatch:
     schedule:
         - cron: "0 0 * * *"
 
