@@ -39,7 +39,7 @@ jobs:
                 fi
 
                 COMMIT_DATE=$(TZ="Asia/Shanghai" date +"%Y-%m-%d %H:%M:%S %Z")
-                COMMIT_MESSAGE="Update GFWList2AGH rules - $COMMIT_DATE"
+                COMMIT_MESSAGE="Update By Action - $COMMIT_DATE"
                 echo "Committing changes with message: $COMMIT_MESSAGE"
                 git commit -m "$COMMIT_MESSAGE"
                 
