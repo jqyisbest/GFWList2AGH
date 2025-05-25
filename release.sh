@@ -238,7 +238,7 @@ function GenerateRules() {
                 fi
             }
             function GenerateRulesFooter() {
-                sed -i 's/\/$//' "${file_path}" # Remove trailing slash if any domains were added
+                # sed -i 's/\/$//' "${file_path}" # Removed this line
                 if [ "${dns_mode}" == "default" ]; then echo -e "]#" >> "${file_path}";
                 elif [ "${dns_mode}" == "domestic" ]; then echo -e "]${domestic_dns[0]}" >> "${file_path}"; 
                 elif [ "${dns_mode}" == "foreign" ]; then echo -e "]${foreign_dns[0]}" >> "${file_path}"; fi
@@ -280,7 +280,7 @@ function GenerateRules() {
                 fi
             }
             function GenerateRulesFooter() {
-                sed -i 's/\/$//' "${file_path}" 
+                # sed -i 's/\/$//' "${file_path}" # Removed this line
                 if [ "${dns_mode}" == "default" ]; then echo -e "]#" >> "${file_path}";
                 elif [ "${dns_mode}" == "domestic" ]; then echo -e "]${domestic_dns[*]}" >> "${file_path}";
                 elif [ "${dns_mode}" == "foreign" ]; then echo -e "]${foreign_dns[*]}" >> "${file_path}"; fi
