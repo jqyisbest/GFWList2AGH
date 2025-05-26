@@ -5013,6 +5013,7 @@ cloudyzgirl.com
 cloupia.com
 cloupia.net
 clova.ai
+clstorage.net
 club.tw
 club1069.com
 clubhouse.com
@@ -10733,7 +10734,11 @@ ibeatsbydre.cc
 ibeatsbydre.com
 ibiblio.org
 ibit.am
+ibkr.ca
 ibkr.com
+ibkr.eu
+ibkr.ie
+ibkrguides.com
 iblist.com
 ibllc.com
 iblogserv-f.net
@@ -14346,6 +14351,7 @@ mpweekly.com
 mql5.com
 mqxd.org
 mr-tireman.jp
+mradx.net
 mray.club
 mrbasic.com
 mrbdsm.com
@@ -17926,6 +17932,7 @@ rootsigning.com
 rosechina.net
 rosemarydoll.com
 roshy.tv
+rostaxi.org
 rotten.com
 rou.video
 roucdn.link
@@ -21671,6 +21678,7 @@ vixen.com
 vixvids.to
 vizvaz.com
 vjav.com
+vk-analytics.ru
 vk-apps.com
 vk-apps.ru
 vk-cdn.me
@@ -23184,6 +23192,7 @@ yamaxun.com
 yammer.com
 yamoon.club
 yande.re
+yandex-bank.net
 yandex.aero
 yandex.az
 yandex.by
@@ -23209,7 +23218,10 @@ yandex.tj
 yandex.tm
 yandex.ua
 yandex.uz
+yandexadexchange.net
 yandexcloud.net
+yandexcom.net
+yandexwebcache.org
 yangjianli.com
 yaohubaba.com
 yaoimangaonline.com
