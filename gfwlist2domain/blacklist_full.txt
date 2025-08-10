@@ -1092,7 +1092,6 @@ aes.ac.uk
 aesworkshops.com
 aex.com
 af-north-1.myhuaweicloud.com
-af-south-1.myhuaweicloud.com
 af.mil
 afantibbs.com
 afao.ac.uk
@@ -1913,9 +1912,6 @@ ap-seoul.tencentcos.com
 ap-singapore.myqcloud.com
 ap-singapore.tencentcos.cn
 ap-singapore.tencentcos.com
-ap-southeast-1.myhuaweicloud.com
-ap-southeast-2.myhuaweicloud.com
-ap-southeast-3.myhuaweicloud.com
 ap-southeast-4.myhuaweicloud.com
 ap-tokyo.myqcloud.com
 ap-tokyo.tencentcos.cn
@@ -9886,7 +9882,6 @@ eu-frankfurt.tencentcos.com
 eu-moscow.myqcloud.com
 eu-moscow.tencentcos.cn
 eu-moscow.tencentcos.com
-eu-west-0.myhuaweicloud.com
 eu-west-101.myhuaweicloud.com
 eu.org
 eubluecardvisa.com
@@ -16601,8 +16596,6 @@ l-0005.dc-msedge.net
 l-msedge.net
 la-forum.org
 la-mama.ru
-la-north-2.myhuaweicloud.com
-la-south-2.myhuaweicloud.com
 lab.skk.moe
 laban.ac.uk
 labiennale.org
@@ -18025,6 +18018,7 @@ maturewifeporn.cc
 maturewomenanal.com
 maturexxxvideos.cc
 mau.ac.uk
+maven.neoforged.net
 maven.org
 max.com
 maxgo.com
@@ -19676,7 +19670,6 @@ na-ashburn.tencentcos.cn
 na-ashburn.tencentcos.com
 na-att-idns.net
 na-me.ac.uk
-na-mexico-1.myhuaweicloud.com
 na-siliconvalley.myqcloud.com
 na-siliconvalley.tencentcos.cn
 na-siliconvalley.tencentcos.com
@@ -19962,6 +19955,7 @@ nenitas.club
 nentindo.net
 neo-miracle.com
 neodaas.ac.uk
+neoforged.net
 neonatalsociety.ac.uk
 neotokyo.supertop-100.com
 neow.in
@@ -24281,7 +24275,6 @@ rtings.com
 rtm.tnt-ea.com
 rtycminnesota.org
 ru-moscow-1.myhuaweicloud.com
-ru-northwest-2.myhuaweicloud.com
 rua-project.ac.uk
 ruanyifeng.com
 ruby-lang.org
@@ -24387,7 +24380,6 @@ s4miniarchive.com
 s81c.com
 s8ds5gfm.xyz
 s8forum.com
-sa-brazil-1.myhuaweicloud.com
 sa-saopaulo.myqcloud.com
 sa-saopaulo.tencentcos.cn
 sa-saopaulo.tencentcos.com
