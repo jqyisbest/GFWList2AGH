@@ -3292,6 +3292,7 @@ bbs.nyinfor.com
 bbs.sina.com
 bbs.skykiwi.com
 bbs.sou-tong.org
+bbs.tuitui.info
 bbsdigest.com
 bbsfeed.com
 bbsland.com
@@ -6740,7 +6741,6 @@ cnet.de
 cnetfrance.fr
 cnex.org.cn
 cnineu.com
-cnitter.com
 cnivogue.com.au
 cnix-gov-cn.com
 cnmd.ac.uk
@@ -20624,7 +20624,6 @@ nocn.ac.uk
 nocookie.net
 nocs.ac.uk
 nodejs.org
-nodeloc.com
 nodes.ac.uk
 nodeseek.com
 nodesnoop.com

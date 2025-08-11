@@ -5066,7 +5066,6 @@ cnet.com
 cnet.de
 cnetfrance.fr
 cnineu.com
-cnitter.com
 cnix-gov-cn.com
 cnn.com
 cnn.io
@@ -15358,7 +15357,6 @@ nobelprize.org
 nobodycanstop.us
 nocookie.net
 nodejs.org
-nodeloc.com
 nodeseek.com
 nodesnoop.com
 nodesource.com
