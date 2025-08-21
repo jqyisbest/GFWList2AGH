@@ -9063,6 +9063,7 @@ ggpds.com
 ggpht.com
 ggsrv.com
 ggssl.com
+gh.io
 ghanely.me
 ghbi.ir
 ghcr.io
@@ -21084,6 +21085,7 @@ udn.com
 udnbkk.com
 udndata.com
 udnfunlife.com
+udomain.hk
 udtrucksmeena.com
 ueberamazon.de
 ufe.cz
