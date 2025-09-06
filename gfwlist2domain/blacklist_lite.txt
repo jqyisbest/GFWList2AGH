@@ -4068,6 +4068,8 @@ bsky.social
 bsw.jp
 bsxm1213.pro
 bt2mag.com
+bt4g.org
+bt4gprx.com
 bt95.com
 btaia.com
 btbit.net
@@ -20042,6 +20044,7 @@ tanflix.com
 tangben.com
 tangbr.net
 tangren.us
+tanks.gg
 taoil-cn.sbs
 taoism.net
 taolun.info

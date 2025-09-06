@@ -5243,6 +5243,8 @@ bsw.co.jp
 bsw.jp
 bsxm1213.pro
 bt2mag.com
+bt4g.org
+bt4gprx.com
 bt95.com
 btaia.com
 btas.ac.uk
@@ -27317,6 +27319,7 @@ tanflix.com
 tangben.com
 tangbr.net
 tangren.us
+tanks.gg
 taoil-cn.sbs
 taoism.net
 taolun.info
