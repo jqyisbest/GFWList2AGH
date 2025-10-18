@@ -3826,6 +3826,7 @@ bnef.com
 bnews.co
 bnn.co
 bnrmetal.com
+bntrace.com
 boardreader.com
 boboporn.com
 boboporn.net
@@ -4611,6 +4612,7 @@ cepacol.ca
 cepacol.com
 ceramics-cadcam.com
 cerdas.com
+cerebras.ai
 cern.ch
 certificat2.com
 certificate-transparency.org
@@ -4983,6 +4985,8 @@ classicalguitarblog.net
 classicnike.com
 classymomsex.com
 claude.ai
+claude.com
+claudemcpclient.com
 claudeusercontent.com
 clco.cc
 cleansite.biz
@@ -11972,6 +11976,7 @@ jav-angel.net
 jav-legend.com
 jav-subtitles.com
 jav-vr.net
+jav.app
 jav.com
 jav.dog
 jav.gallery
@@ -13467,6 +13472,7 @@ marketwatch.com
 markingmenus.com
 markzuckerberg.com
 marranazas.com
+marscode.com
 martau.com
 martincartoons.com
 martinoei.com
@@ -15258,6 +15264,7 @@ nfsc.global
 nfscdict.com
 nfscofficial.com
 nfsworld.com
+nftstatic.com
 nftstorage.link
 ng.mil
 nga.mil
@@ -20802,6 +20809,7 @@ tracker.network
 tracking-location.com
 tradevip1.com
 tradingview.com
+trae.ai
 traffichaus.com
 trafficmanager.net
 trakt.tv
