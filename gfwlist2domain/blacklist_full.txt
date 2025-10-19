@@ -2459,6 +2459,7 @@ arirangmeari.com
 ark-genomics.ac.uk
 ark.ac.uk
 ark.to
+arkoselabs.com
 arlingtoncemetery.mil
 arm.ac.uk
 arma.ac.uk
@@ -4917,6 +4918,7 @@ boomerang.com
 boomssr.com
 boomtrain.com
 booru.org
+boosty.to
 booth.pm
 bootstrapcdn.com
 bootyliciousmag.com
@@ -5995,6 +5997,7 @@ cdn-images.mailchimp.com
 cdn-spotify-experiments.conductrics.com
 cdn-telegram.org
 cdn-terapeak.com
+cdn-vk.ru
 cdn.ac.uk
 cdn.arstechnica.net
 cdn.assets.lfpcontent.com
@@ -7139,6 +7142,7 @@ conductrics.com
 conductus.ac.uk
 conel.ac.uk
 confetti.ac.uk
+configuration-lb.ls-apple.com.akadns.net
 conform.ac.uk
 confuciusinstitute.ac.uk
 connaissancesfinancierespratiques.ca
@@ -8249,6 +8253,7 @@ dhlestudio.com.co
 diabetes-healthnet.ac.uk
 diablo3.com
 diabloimmortal.com
+diabrowser.com
 dialga.com
 dialogflow.com
 diamantewebcam.com
@@ -8710,6 +8715,7 @@ domesticabuserisk.ac.uk
 domywife.com
 don.ac.uk
 donatecarsoh.org
+donationalerts.com
 doncaster.ac.uk
 donga.com
 dongtaiwang.com
@@ -12292,6 +12298,7 @@ gitbook.com
 gitbook.io
 gitbooks.io
 githack.com
+github-api.arkoselabs.com
 github.ai
 github.blog
 github.com
@@ -13032,6 +13039,7 @@ guangming.com.my
 guangming.org
 guangnianvpn.com
 guaranitermal.com
+guardarian.com
 guardianapis.com
 guardianapps.co.uk
 guardianproject.info
@@ -18484,6 +18492,7 @@ melonbooks.co.jp
 melonstube.com
 meltoday.com
 meme111.com
+memealerts.com
 memehk.com
 memes.tw
 memorybbs.com
@@ -21496,6 +21505,7 @@ ok.ru
 ok.xxx
 okayfreedom.com
 okazudouga.tokyo
+okcdn.ru
 okex.com
 okinawabank.co.jp
 okk.tw
@@ -24735,10 +24745,14 @@ sams.ac.uk
 samsung.com
 samsungapps.com
 samsungcloud.com
+samsungconsent.com
 samsungdm.com
 samsunggalaxyfriends.com
+samsunghealth.com
+samsungiotcloud.com
 samsungknox.com
 samsungqbe.com
+samsungrs.com
 sandisk.ae
 sandisk.co.jp
 sandisk.co.kr
@@ -26704,6 +26718,7 @@ stcroixmosquitoproject.com
 stdavidscollege.ac.uk
 stdavidsdaygroup.ac.uk
 stdoms.ac.uk
+stealthex.io
 steam-api.com
 steam-chat.com
 steam.apac.qtlglb.com
@@ -29550,6 +29565,7 @@ vercel-dns.com
 vercel-status.com
 vercel.app
 vercel.blog
+vercel.dev
 vercel.events
 vercel.live
 vercel.pub
@@ -29987,6 +30003,7 @@ vk.me
 vk.ru
 vk.team
 vkcache.com
+vkcloud-static.ru
 vkgo.app
 vklive.app
 vkmessenger.app
