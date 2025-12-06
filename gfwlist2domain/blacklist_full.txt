@@ -28365,6 +28365,7 @@ tiffany-towers.com
 tig-ol-bitties.live
 tigervpn.com
 tiipple.ac.uk
+tiktok-row.net
 tiktok.com
 tiktokcdn-eu.com
 tiktokcdn-us.com
@@ -28372,6 +28373,8 @@ tiktokcdn.com
 tiktokd.net
 tiktokd.org
 tiktokeu-cdn.com
+tiktokglobalshopv.com
+tiktokminis.us
 tiktokv.com
 tiktokv.eu
 tiktokv.us
@@ -33017,6 +33020,7 @@ zophar.net
 zopim.com
 zorglist.com
 zorrovpn.com
+zotero.org
 zozotown.com
 zpn.im
 zqqpwz.com
