@@ -1965,6 +1965,7 @@ archives.gov
 archivx.to
 archlinux.org
 archlinuxarm.org
+arcraiders.com
 arctosia.com
 area120.com
 area51.to
@@ -4282,6 +4283,7 @@ c-ij.com
 c-msedge.net
 c-span.org
 c-spanvideo.org
+c.gle
 c0930.com
 c100tibet.org
 c2cx.com
@@ -7227,6 +7229,8 @@ emaga.com
 emagic.de
 email-once.com
 emanna.com
+embark-studios.com
+embark.games
 embase.com
 embed-cdn.com
 embed.ly
@@ -7835,6 +7839,8 @@ facegbook.com
 faceid99.com
 faceid99.net
 faceidglobal.com
+faceit-cdn.net
+faceit.com
 faceless.me
 faceobk.com
 faceobok.com
@@ -13417,7 +13423,6 @@ lyzsxx.com
 lzjscript.com
 lzmtnews.org
 m-power.com
-m-team.cc
 m.me
 m12.vc
 m2m.com
@@ -18094,6 +18099,7 @@ rea.io
 rea.tech
 reabble.com
 reachporn.com
+reachthefinals.com
 reachtheworldonfacebook.com
 react.com
 reactjs.com
