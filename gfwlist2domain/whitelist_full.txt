@@ -24262,8 +24262,6 @@ cn-chx.com
 cn-comfort.com
 cn-cr.com
 cn-dlmgr-sdc.blurdev.com
-cn-east-2.myhuaweicloud.com
-cn-east-3.myhuaweicloud.com
 cn-elite.com
 cn-em.com
 cn-ferment.com
@@ -24287,14 +24285,6 @@ cn-mingda.com
 cn-msedge.net
 cn-mw.com
 cn-natural.com
-cn-north-1.myhuaweicloud.com
-cn-north-2.myhuaweicloud.com
-cn-north-3.myhuaweicloud.com
-cn-north-4.myhuaweicloud.com
-cn-north-5.myhuaweicloud.com
-cn-north-6.myhuaweicloud.com
-cn-north-9.myhuaweicloud.com
-cn-northeast-1.myhuaweicloud.com
 cn-only.com
 cn-otaproxy-sdc.blurdev.com
 cn-psy.com
@@ -24307,10 +24297,6 @@ cn-sdf.com
 cn-shine.com
 cn-smp-paymentservices.apple.com
 cn-soft.com
-cn-south-1.myhuaweicloud.com
-cn-south-2.myhuaweicloud.com
-cn-south-4.myhuaweicloud.com
-cn-southwest-2.myhuaweicloud.com
 cn-tf.com
 cn-tom.com
 cn-truck.com
@@ -67981,6 +67967,7 @@ m-finder.com
 m-hero.com
 m-mall-origin.icbc.perf.akadns99.net
 m-rainbow.com
+m-team.cc
 m.567it.com
 m.dji.com
 m.dji.net
