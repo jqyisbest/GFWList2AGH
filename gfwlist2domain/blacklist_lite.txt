@@ -6433,6 +6433,8 @@ dmc.nico
 dmcdn.net
 dmed.technology
 dmhy.org
+dmit.io
+dmit.sh
 dml-lang.org
 dmm-extension.com
 dmm.com
@@ -7343,6 +7345,7 @@ entrust.cn
 entrust.com
 entrust.net
 entrustdatacard.com
+eotarchive.org
 epac.to
 epic.network
 epicbrowser.com
@@ -9351,6 +9354,7 @@ ghbi.ir
 ghcr.io
 ghettotube.com
 ghidra-sre.org
+ghostarchive.org
 ghostgames.com
 ghostnoteapp.com
 ghostpath.com
@@ -14005,6 +14009,7 @@ meltoday.com
 meme111.com
 memealerts.com
 memehk.com
+mementoweb.org
 memes.tw
 memorybbs.com
 memri.org
@@ -16899,6 +16904,7 @@ perfecttitspics.com
 perfectvpn.net
 periscope.tv
 perl.org
+perma.cc
 perplexity.ai
 perplexity.com
 persagg.com
@@ -22854,6 +22860,7 @@ webcamjackers.com
 webcammedellin.co
 webcams.tv
 webcamtubexxx.com
+webcitation.org
 webevader.org
 webex.ca
 webex.com
