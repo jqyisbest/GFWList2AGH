@@ -8765,7 +8765,6 @@ docleradn.com
 doclercdn.com
 docs.cfw.lbyczf.com
 docs.com
-docs.deno.com
 docs.new
 docs.rs
 doctor-videos.com
@@ -12057,6 +12056,7 @@ gannettdigital.com
 gao1.cc
 gaofuwu.cc
 gaoming.net
+gaopi.net
 gaozhisheng.net
 gaozhisheng.org
 gaozs18.buzz
@@ -12364,6 +12364,7 @@ gfw.org.ua
 gfw.press
 gfw.report
 gfwatch.org
+gfwbao.com
 gfwlist.end
 gfwlist.start
 gfx.ms
@@ -27180,6 +27181,7 @@ steamcontent.com
 steamdb.info
 steamdeck.com
 steamgames.com
+steamladder.com
 steamofporn.com
 steampowered.com
 steamserver.net
