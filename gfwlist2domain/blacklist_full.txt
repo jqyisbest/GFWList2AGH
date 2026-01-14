@@ -8513,6 +8513,7 @@ dilber.se
 dilcdn.com
 dilstoncollege.ac.uk
 dingchin.com.tw
+dinopoloclub.com
 dinotube.com
 dipity.com
 dippam.ac.uk
@@ -19685,6 +19686,7 @@ mobileview.page
 mobilevrxxx.com
 mobileways.de
 mobilitymoodplace.ac.uk
+mobimon.com.tw
 mobmyanmar.com
 moby.to
 mobypicture.com
@@ -21513,6 +21515,7 @@ nownews.com
 nowtorrents.com
 nox.ac.uk
 noxinfluencer.com
+noxygames.com
 noypf.com
 nozomi.la
 npa.go.jp
@@ -24482,6 +24485,8 @@ raw.githack.com
 rawgit.com
 rawgithub.com
 raxcdn.com
+rayark.download
+rayark.net
 razer.com
 razerofficial.com
 razersupport.com
