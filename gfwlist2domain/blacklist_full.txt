@@ -3418,6 +3418,7 @@ battlefront2.com
 battlefrontii.com
 battlelog.com
 battlenet.com
+battleye.com
 bavs.ac.uk
 baxsound.com
 bayareabmw.com
@@ -24078,6 +24079,7 @@ ptwxz.com
 ptzwx.com
 pub.dev
 pubg.com
+pubg1.battleye.com
 public-sex-porn.com
 public-trust.com
 public-us-pingsx.api.clonoth.com
