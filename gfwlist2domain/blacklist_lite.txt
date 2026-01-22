@@ -9340,6 +9340,7 @@ geobasket.ru
 geocities.com
 geocities.jp
 geodesummit.com
+geogebra.org
 geolytics.com
 geoport.com
 geospatialimaging.com
@@ -23263,6 +23264,7 @@ wiiugamepad.com
 wiivc.net
 wikaba.com
 wikawika.xyz
+wiki.gg
 wikia.com
 wikia.org
 wikibooks.org
