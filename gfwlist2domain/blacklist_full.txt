@@ -5336,6 +5336,7 @@ brutaltgp.com
 bs-adreview.com
 bs-awh.ne.jp
 bsa.ac.uk
+bsappapi.com
 bsaw.ac.uk
 bsbec.ac.uk
 bsdc.ac.uk
@@ -7170,7 +7171,6 @@ com.bo
 com.bs
 com.by
 com.bz
-com.co
 com.cu
 com.cy
 com.de
@@ -23196,6 +23196,7 @@ pixtronix.com
 pjbyj.top
 pjful-app.lol
 pjgirls.com
+pjsekai.sega.jp
 pk.com
 pki-post.ch
 pki-posta.ch
@@ -25315,6 +25316,7 @@ sale-nikeshoes.com
 salebeatslasteststyle4you.com
 saleblackfridaydrebeats.com
 salecheaphandbags.com
+salesforce-setup.com
 salesforce.com
 salesforce.org
 salesforceiq.com
@@ -25725,6 +25727,7 @@ seevpn.com
 seezone.net
 sefton-acl.ac.uk
 sefton.ac.uk
+sega.jp
 segment.com
 sego8.cc
 sego8.co
@@ -27934,6 +27937,7 @@ tahr.org.tw
 taiav.com
 tail-f.com
 tailf.com
+tails.net
 tailscale.com
 tailscale.io
 tailwindtraders.com
