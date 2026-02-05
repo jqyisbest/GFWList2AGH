@@ -22328,6 +22328,7 @@ osier.ac.uk
 osiri-suki-club.com
 osl.com
 osm.org
+osmand.net
 osmfoundation.org
 osmosis.ac.uk
 ospray.net
@@ -25725,6 +25726,7 @@ seevic-college.ac.uk
 seevic.ac.uk
 seevpn.com
 seezone.net
+sef.org.tw
 sefton-acl.ac.uk
 sefton.ac.uk
 sega.jp
@@ -31927,6 +31929,7 @@ www.dwheeler.com
 www.eastturkistan.net
 www.gmiddle.com
 www.gmiddle.net
+www.hoyolab.com
 www.hustlercash.com
 www.idlcoyote.com
 www.imdb.com
