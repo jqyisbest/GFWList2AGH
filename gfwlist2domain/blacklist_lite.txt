@@ -259,7 +259,10 @@
 2gayboys.com
 2k.com
 2kcoretech.online
+2kct.onl
 2kgames.com
+2ksports.com
+2kweb.online
 2lib.org
 2lipstube.com
 2o7.net
@@ -722,6 +725,7 @@ acebooik.com
 acebook.com
 acer-group.com
 aceros-de-hispania.com
+acesofthunder.net
 acevpn.com
 acg.rip
 acg18.me
@@ -754,6 +758,7 @@ acrobat.com
 actalis.com
 actalis.it
 actfortibet.org
+activematter.game
 activeteachonline.com
 activpn.com
 aculo.us
@@ -2060,6 +2065,7 @@ artofpeacefoundation.org
 artstation.com
 artstationmedia.com
 artstor.org
+artstorm.com
 artsy.net
 arukas.io
 arvanstorage.ir
@@ -5700,6 +5706,7 @@ cromite.org
 crossborderexpansion.com
 crossfitfirestone.com
 crossmediapanel.com
+crossout.net
 crossthewall.net
 crossvpn.net
 crosswalk-project.com
@@ -5709,6 +5716,7 @@ crowdtangle.com
 croxyproxy.com
 crr.com
 crrev.com
+crsed.net
 crtsgfb1.top
 crucial.com
 cruel-furies.com
@@ -5745,6 +5753,7 @@ ctotires.com
 ctowc.org
 ctwant.com
 cubicmotion.com
+cubicodyssey.game
 cuckfilmswifefuck.com
 cuckold69.com
 cuckoldfuck.com
@@ -7438,6 +7447,7 @@ englishforeveryone.org
 englishpen.org
 enjoyasianporn.com
 enjoyfuck.com
+enlisted.net
 enpass.io
 enpirion.com
 enspireformula.com
@@ -9163,6 +9173,8 @@ gacebook.com
 gaeproxy.com
 gaforum.org
 gagaoolala.com
+gaijin.net
+gaijinent.com
 gaito.xyz
 galaxymobile.jp
 gale.com
@@ -14780,6 +14792,7 @@ modeloswebcambogota.com
 modelsfreecams.com
 modeltv.com
 modernchinastudies.org
+modernwarships.com
 modmyi.com
 modoo.at
 modperl.pl
@@ -18720,6 +18733,7 @@ rocksdb.net
 rocksdb.org
 rocksextube.com
 rockstargames.com
+rockstarnorth.com
 roedu.net
 rojo.com
 roku.com
@@ -20206,6 +20220,7 @@ standupfortibet.org
 standwithhk.org
 stanford.edu
 star-brasil.com
+star-conflict.com
 star-latam.com
 starbucks-stars.com
 starbucks.ad
@@ -20282,6 +20297,7 @@ stateofthemap.org
 static-cisco.com
 static-economist.com
 static-nike.com
+static-storage.net
 static-verizon.com
 static.fun
 statically.io
@@ -23047,6 +23063,7 @@ warnerbrosgames.com
 warnermediacdn.com
 warp.plus
 warroom.org
+warthunder.com
 waselpro.com
 washa.tv
 washeng.net
@@ -23526,6 +23543,7 @@ wsjshop.com
 wsjwine.com
 wtbn.org
 wtfpeople.com
+wtmobile.com
 wto.org
 wudifeixue.com
 wuerkaixi.com
@@ -24789,6 +24807,9 @@ zweiporn.com
 zwtvusa.com
 zynaima.com
 zynamics.com
+zynga.com
+zyngaplayersupport.com
+zyngapoker.com
 zyns.com
 zyxel.com
 zyzc9.com
