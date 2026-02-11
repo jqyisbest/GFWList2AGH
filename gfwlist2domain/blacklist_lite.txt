@@ -2248,8 +2248,6 @@ auricularesbeatsmarkt.com
 auroraoss.com
 ausbeatsbydrdre.com
 auth0.com
-authorizeddns.net
-authorizeddns.org
 authorxml.com
 authpass.app
 authy.com
@@ -6015,12 +6013,6 @@ ddh.gg
 ddhw.info
 dditsadn.com
 dditscdn.com
-ddns.info
-ddns.mobi
-ddns.ms
-ddns.name
-ddns.net
-ddns.us
 de-sci.org
 de1lib.org
 deadhouse.org
@@ -7282,7 +7274,6 @@ edgemeplease.com
 edicypages.com
 edisebay.com
 editorx.com
-edmontonchina.cn
 edmontonservice.com
 edninfo.com
 edns.biz
@@ -8877,8 +8868,6 @@ freechina.news
 freechinaforum.org
 freechinaweibo.com
 freecodecamp.org
-freeddns.com
-freeddns.org
 freedirecttvspecial.com
 freedl.org
 freedomchina.info
@@ -9738,6 +9727,8 @@ google-syndication.com
 google.ac
 google.ad
 google.ae
+google.af
+google.ai
 google.al
 google.am
 google.as
@@ -9776,6 +9767,7 @@ google.dm
 google.dz
 google.ee
 google.es
+google.eu
 google.fi
 google.fm
 google.fr
@@ -9788,6 +9780,7 @@ google.gm
 google.gp
 google.gr
 google.gy
+google.hk
 google.hn
 google.hr
 google.ht
@@ -9820,6 +9813,7 @@ google.ms
 google.mu
 google.mv
 google.mw
+google.mx
 google.ne
 google.net
 google.ng
@@ -9857,8 +9851,10 @@ google.tn
 google.to
 google.tt
 google.uk
+google.us
 google.ventures
 google.vg
+google.vn
 google.vu
 google.ws
 googleacquisitionmigration.com
@@ -10821,7 +10817,6 @@ hotcool.tw
 hotcrp.com
 hotcuckoldwife.com
 hotcumporn.com
-hotels.cn
 hotescortdusseldorf.com
 hotfiesta.com
 hotfucktube.com
@@ -12203,6 +12198,7 @@ istripper.com
 isunaffairs.com
 isuntv.com
 isupportuyghurs.org
+it.ao
 it.nf
 ita-do.com
 itaboo.info
@@ -12927,7 +12923,6 @@ kenyasexparadise.com
 keontech.net
 kepard.com
 kernel.org
-keso.cn
 kex.com
 keybase.io
 keybaseapi.com
@@ -13020,7 +13015,6 @@ kirbysepicyarn.com
 kirbysuperstarultra.com
 kiro.dev
 kismia.com
-kissbbao.cn
 kisscos.net
 kissjav.com
 kissjav.li
@@ -15227,7 +15221,6 @@ myconstructionworld.net
 mycould.com
 mydad.info
 mydati.com
-myddns.com
 mydirectgroove.com
 mydirectvchannels.com
 mydirtyhobby.com
@@ -16599,7 +16592,6 @@ oreilly.review
 oreillystatic.com
 oreno3d.com
 org.au
-org.cn
 org.hk
 org.il
 org.mx
@@ -18000,6 +17992,7 @@ projectshoreline.com
 projectvasari.com
 projectvoyeur.com
 promonsterbeatsbydre.com
+prompthero.com
 pron.guru
 propertysex.com
 proporn.com
@@ -18086,6 +18079,7 @@ pugetsoundmini.com
 pugpig-dev.com
 pugpig-stage.com
 pugpig.com
+pullfolio.co
 pullfolio.com
 pullstring.net
 pulsebrowser.app
@@ -18190,7 +18184,6 @@ qingenporn.net
 qingse.one
 qise100.com
 qiwen.lu
-qixianglu.cn
 qkjuyet.com
 qkshare.com
 qlink.to
@@ -22205,7 +22198,6 @@ valvesoftware.com
 van001.com
 van698.com
 vancouverbmwretailers.ca
-vanemu.cn
 vanilla-jp.com
 vanish.at
 vanish.be
