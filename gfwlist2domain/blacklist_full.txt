@@ -24223,6 +24223,7 @@ qualcommventures.cn
 qualcommventures.com
 qualidata.ac.uk
 qualphone.com
+qualtrics.com
 qualysapi.qcpp1.net
 qualysapi.qpdp1.net
 qualysguard.qatp1.net
@@ -28798,6 +28799,7 @@ tomovie.net
 tomp3.cc
 tomsguide.com
 tomshardware.com
+ton.org
 tonec.com
 tongil.or.kr
 tonicmovies.com
@@ -29483,6 +29485,7 @@ uberproxy.net
 ubertags.com
 ubi.com
 ubisoft.com
+ubisoft.siteintercept.qualtrics.com
 ubisoftconnect.com
 ublock.org
 ubn.ac.uk
@@ -31073,6 +31076,7 @@ wallornot.org
 wallpapercasa.com
 wallproxy.com
 wallsttv.com
+wallzhihu.com
 walmart-content.com
 walmart.com
 walmart.pharmacy
