@@ -1533,6 +1533,7 @@ akatns.net
 akiba-online.com
 akiba-souken.com
 akiba-web.com
+akile.io
 akinator.com
 akita-bank.co.jp
 akow.org
@@ -2811,6 +2812,7 @@ assesphoto.com
 assets.bwbx.io
 assets.fanart.tv
 assets.fastgit.org
+assets.nxtrace.org
 assets1.xboxlive.com
 assets2.xboxlive.com
 assetsadobe.com
@@ -6861,6 +6863,7 @@ clash.com
 clashmini.com
 clashofclans.com
 clashroyale.com
+clashverge.dev
 clasporno.org
 classicalguitarblog.net
 classicnike.com
@@ -18976,6 +18979,7 @@ medrxiv.org
 medschools.ac.uk
 medway.ac.uk
 medwayacl.ac.uk
+meee.com.tw
 meendo.com
 meet.new
 meetandfuck.games
@@ -21917,6 +21921,7 @@ nwy.ac.uk
 nxta.org
 nxtdig.com.hk
 nxtdig.com.tw
+nxtrace.org
 nyaa.eu
 nyaa.net
 nyaa.si
@@ -22266,6 +22271,7 @@ openbook.org.tw
 opencas.io
 opencollective.com
 opencreate.org
+opencritic.com
 opendemocracy.net
 opendesktop.org
 opendn.xyz
@@ -32013,6 +32019,7 @@ www.ajsands.com
 www.anix.moe
 www.antd.org
 www.aolnews.com
+www.clashverge.dev
 www.cmoinc.org
 www.dmm.com
 www.eastturkistan.net
