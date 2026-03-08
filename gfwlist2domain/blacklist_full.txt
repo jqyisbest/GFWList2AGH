@@ -2220,6 +2220,7 @@ aporntv.com
 apornvideo.com
 app-dynamics.com
 app-measurement.net
+app-pay.jp
 app-store.wang
 app.box.com
 app.cloudcone.com
@@ -25478,6 +25479,7 @@ samsungdm.com
 samsunggalaxyfriends.com
 samsunghealth.com
 samsungiotcloud.com
+samsungiots.com
 samsungknox.com
 samsungosp.com
 samsungqbe.com
@@ -26722,6 +26724,7 @@ smartonesolutions.com.hk
 smartonesolutions.hk
 smartsheet.com
 smartstream.ne.jp
+smartthings.com
 smashed.xxx
 smbc.co.jp
 smbctb.co.jp
