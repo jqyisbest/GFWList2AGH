@@ -7710,6 +7710,7 @@ esmtp.biz
 esoir.be
 esopworld.com
 esp32.com
+esp8266.com
 esperanzagomez.org
 espn.com
 espn.net
@@ -7717,6 +7718,7 @@ espncdn.com
 espnqa.com
 esports.gg
 esposasymaridos.com
+espressif.com
 esri.com
 estudiopenthouse.com
 esu.dog

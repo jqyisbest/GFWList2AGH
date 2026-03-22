@@ -10377,6 +10377,7 @@ esoir.be
 esopworld.com
 esp-scotland.ac.uk
 esp32.com
+esp8266.com
 espa-headlines.ac.uk
 espa.ac.uk
 espadoldettol.com.ar
@@ -10390,6 +10391,7 @@ espndotcom.tt.omtrdc.net
 espnqa.com
 esports.gg
 esposasymaridos.com
+espressif.com
 esrc.ac.uk
 esrcfestival.ac.uk
 esrcmanchesterfest.ac.uk
