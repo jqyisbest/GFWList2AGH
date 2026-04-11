@@ -2075,11 +2075,8 @@ anm.co.uk
 annamilk.com
 annas-archive.gd
 annas-archive.gl
-annas-archive.in
-annas-archive.li
 annas-archive.org
 annas-archive.pk
-annas-archive.pm
 annas-archive.se
 annatam.com
 anniesland-fe.ac.uk
@@ -21900,6 +21897,7 @@ ntp.ring.gr.jp
 ntp.ripe.net
 ntp.se
 ntp.t.ring.gr.jp
+ntp.time.nl
 ntp.tohoku.ac.jp
 ntp.tut.ac.jp
 ntp.ufe.cz
@@ -21909,6 +21907,7 @@ ntp1.jst.mfeed.ad.jp
 ntp1.ntp-servers.net
 ntp1.plala.or.jp
 ntp1.ring.gr.jp
+ntp1.time.nl
 ntp1.tohoku.ac.jp
 ntp1.v6.mfeed.ad.jp
 ntp1.wakwak.com
@@ -21916,6 +21915,7 @@ ntp2.jst.mfeed.ad.jp
 ntp2.ntp-servers.net
 ntp2.plala.or.jp
 ntp2.ring.gr.jp
+ntp2.time.nl
 ntp2.tohoku.ac.jp
 ntp2.v6.mfeed.ad.jp
 ntp2.wakwak.com
@@ -21926,6 +21926,8 @@ ntp4.ntp-servers.net
 ntp5.ntp-servers.net
 ntp6.ntp-servers.net
 ntp7.ntp-servers.net
+ntppool1.time.nl
+ntppool2.time.nl
 ntrfun.com
 ntsna.gov.tw
 ntten-mg.buzz
@@ -29158,6 +29160,7 @@ tiltbrush.com
 timdir.com
 time.com
 time.gov
+time.nl
 time.nrc.ca
 time.windows.com
 timefxapp.com
