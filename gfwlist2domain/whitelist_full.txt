@@ -1437,6 +1437,7 @@
 100ask.net
 100ask.org
 100audio.com
+100baisui.com
 100bt.com
 100chou.com
 100chui.com
@@ -13426,6 +13427,7 @@ ani-sh.com
 aniccw.net
 aniceapp.com
 anicoga.com
+anictdns.click
 anictdns.store
 anijue.com
 anileyehospital.org
@@ -15711,6 +15713,7 @@ baisihan.com
 baisiterzh.com
 baisiweiting.com
 baisu.cc
+baisuifc.shop
 baisuizhixiang.com
 baitahe.net
 baitaihuge.com
@@ -26892,6 +26895,7 @@ cobenet.com
 cobetterfiltration.com
 cobioer.com
 coboak.com
+cobtecinternational.com
 cobuy.net
 cobvgroup.com
 cocas.cc
@@ -35661,6 +35665,7 @@ eo-edgefunctions6.com
 eo-edgefunctions7.com
 eo-edgefunctions8.com
 eo-edgefunctions9.com
+eo-ns.com
 eo-preview.com
 eo-shieldspace.com
 eo-vod.com
@@ -35713,6 +35718,7 @@ ep-china.net
 ep-zl.com
 ep12.com
 ep365.com
+ep8u.com
 epaas.net
 epaiclub.com
 epailive.com
@@ -37523,6 +37529,7 @@ feiwan.net
 feiwentianxia.com
 feixian.cc
 feixiansoft.com
+feixiaodata.com
 feixiaoqiu.com
 feixiong.tv
 feixue666.com
@@ -38387,7 +38394,6 @@ fltrp.com
 fluke-ig.com
 flumatic.com
 flutterchina.club
-flv.drs.tv.yatv.tv
 flvcd.com
 flvlog.com
 flvpw.com
@@ -51881,7 +51887,6 @@ httingshu.com
 httpcanary.com
 httpcn.com
 httpdns.pro
-httpdvb.slave.ttcatv.tv
 httpsok.com
 httpssl.com
 htucloud.com
@@ -53455,6 +53460,7 @@ hxytw.com
 hxyxt.com
 hxyyw.com
 hxz.ink
+hxzf9.com
 hxzlsgs.com
 hy-china.com
 hy-express.com
@@ -59355,6 +59361,7 @@ jinshangji.com
 jinshanglawfirm.com
 jinshangroup.net
 jinshangtechnology.com
+jinshanip.cc
 jinshanju.com
 jinshanmz.com
 jinshasitemuseum.com
@@ -64323,6 +64330,7 @@ kuailepipixia.com
 kuailetongyao.com
 kuailexs.com
 kuailexue.com
+kuaileyouxuan.com
 kuailezu.com
 kuailiyu.com
 kuailiyu.net
@@ -67468,7 +67476,6 @@ live.hhtv.cc
 live.hnzzzzzdst.com
 live.lxzc.net
 live.ntdimg.com
-live.qinyangtv.com
 live.sccxtv.com
 live.sichuanmianning.com
 live.streamingfast.net
@@ -69584,14 +69591,7 @@ m3cqjc3og6.com
 m3guo.com
 m3kaiye.com
 m3mk7nyo17.com
-m3u8.channel.luzhoubs.com
-m3u8.channel.yatv.tv
 m3u8.file.leshantv.net
-m3u8.lschannel.yatv.tv
-m3u8.mschannel.yatv.tv
-m3u8.smchannel.yatv.tv
-m3u8.ycchannel.yatv.tv
-m3u8.yjchannel.yatv.tv
 m3u8channel-bx.wuxianyaan.com
 m3u8channel-ms.wuxianyaan.com
 m3u8channel-sm.wuxianyaan.com
@@ -84133,6 +84133,9 @@ redmagic.com
 redmart.com
 redmou.com
 rednetdns.com
+rednote.com
+rednote.life
+rednotecdn.com
 redocn.com
 redodopower.com
 redoop.com
@@ -84721,6 +84724,7 @@ rngtest.com
 rnhospital.com
 rnhy.net
 rnmachine.com
+rnote.com
 ro50.com
 ro8qwpaikd4kx.com
 road-group.com
@@ -92680,10 +92684,8 @@ stream.nbbltv.com
 stream.rcs.revma.com
 stream.slave.jxtvnet.tv
 stream.superfm99-1.com.tw
-stream.sxsztv.com
 stream.wbez.org
 stream.xctv.news
-stream.ysbtv.net
 stream.zhystv.com
 stream.zzgd.tv
 stream0.tv41.ru
@@ -99380,6 +99382,7 @@ twk.cc
 twmsuf.com
 twoarmy.com
 twoear.com
+twowinit.com
 twplink.xyz
 tws.com
 twsapp.com
@@ -101742,7 +101745,6 @@ vod-pro.com
 vod-qcloud.com
 vod-test.com
 vod-upload.com
-vod.qhdcm.com
 vodapis.com
 vodapisbk.com
 vodasafe.com
@@ -106257,7 +106259,6 @@ www.uz0.xyz
 www.vive.com
 www.viveport.com
 www.volvocars.com
-www.yxssp.com
 www1.djicdn.com
 www100789.com
 www11ic-shinkni-ib-jp.com
@@ -111724,6 +111725,7 @@ ycbiz.net
 ycbright.com
 ycbroker.com
 ycbus.com
+ycbus.net
 ycc.ink
 yccdl.net
 yccdn.com
@@ -112630,6 +112632,7 @@ yihegroup.com
 yihekf.com
 yihengyt.com
 yiherubber.com
+yihexingyao.com
 yihong001.com
 yihong1718.com
 yihtc.com
@@ -112746,6 +112749,7 @@ yilong.com
 yilongnews.com
 yilongweiguo.com
 yilu365.com
+yilufawh.com
 yilule.com
 yiluzouhao.com
 yilvcheng.com
