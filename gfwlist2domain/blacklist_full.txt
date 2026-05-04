@@ -8700,6 +8700,7 @@ digitalhub.com
 digitalid.ch
 digitallifespan.ac.uk
 digitalnomadsproject.org
+digitalocean-ui.com
 digitalocean.com
 digitaloceanspaces.com
 digitalpack.com
@@ -12181,6 +12182,7 @@ ftvgirls.com
 ftvmilfs.com
 ftvnews.com.tw
 ftx.com
+fu62.vip
 fubo.tv
 fucd.com
 fuchsia.dev
@@ -19956,6 +19958,7 @@ minisaskatoon.ca
 minisaskatoon.com
 minisexdoll.com
 minishop.ca
+miniso-au.com
 miniso-bh.com
 miniso-np.com
 miniso-nz.com
@@ -20871,6 +20874,7 @@ mythicentertainment.net
 mythicgames.com
 mytimesplus.co.uk
 mytizi.com
+mytokenapi.com
 mytopf.com
 mytrannycams.com
 mytrk.link
@@ -25159,6 +25163,7 @@ rdnet.ac.uk
 rds-yes.buzz
 rdtcdn.com
 re-net.ac.uk
+re25.vip
 rea-asia.com
 rea-group.com
 rea.design
@@ -26129,9 +26134,6 @@ sc.com
 sc1.ac.uk
 sca-tolo.info
 scaan.ac.uk
-scache.vzw.com
-scache1.vzw.com
-scache2.vzw.com
 scadr.ac.uk
 scae.ac.uk
 scala-lang.org
@@ -27836,7 +27838,6 @@ ss-inf.net
 ss-link.com
 ss2.us
 ss7.app
-ss7.vzw.com
 ssa.gov
 ssdevrd.com
 ssees.ac.uk
