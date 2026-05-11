@@ -13815,7 +13815,6 @@ assets-global.viveport.com
 assets.analog.com
 assets.djicdn.com
 assets.razerzone.com
-assets.uxengine.net
 assets2.razerzone.com
 assrt.net
 assyrb.com
@@ -24626,7 +24625,6 @@ cmread.com
 cmreltd.com
 cmri.cc
 cmrid.com
-cms.csw.lenovo.com
 cms1924.org
 cms258.com
 cmschina.com
@@ -52299,7 +52297,6 @@ icbeexpo.com
 icbkfs.com
 icbkus.com
 icbuy.com
-icc.lenovo.com
 icc.link
 iccchina.com
 iccessh.org
@@ -62946,7 +62943,6 @@ lcnichia.com
 lcofjp.com
 lcofo.com
 lcouncil.com
-lcp.gtm.lenovo.com
 lcp.lenovo.com
 lcpdu.com
 lcpumps.com
@@ -63029,7 +63025,6 @@ ldyz365.com
 ldzcgs.com
 ldzxyy.com
 le-feng.com
-le-reporting.lenovo.com
 le-wan.com
 le.com
 le365.cc
@@ -63327,7 +63322,6 @@ lemurbrowser.com
 len.ink
 lenauth.com
 lenbenelectric.com
-lenbpreturns.lenovo.com
 lenciel.com
 lendy520.com
 lenfocus.com
@@ -75541,7 +75535,6 @@ pcsee.org
 pcsfc.com
 pcshou.com
 pcsjsm.com
-pcsupport.lenovo.com
 pct86.com
 pctutu.net
 pctvx.com
@@ -82105,7 +82098,6 @@ safetyimg.com
 safetystatic.com
 safetyvod.com
 safround.com
-sagetrc.com
 sagewc-exp.com
 sagigame.net
 sagsaas.com
@@ -84798,7 +84790,6 @@ shenda-group.com
 shendatong.com
 shendiaoqzj.com
 shendoow.com
-shendu.cc
 shendu.com
 shendu123.com
 shendugho.com
@@ -87368,7 +87359,6 @@ smartsenstech.com
 smartssc.lenovo.com
 smartsteps.com
 smartstudy.com
-smartsupport.lenovo.com
 smarttaixing.com
 smartwebee.com
 smartworkplace.lenovo.com
@@ -100654,7 +100644,6 @@ wjzpgz.com
 wk2.com
 wk515.com
 wk78.com
-wka8.com
 wkai.cc
 wkandian.com
 wkanx.com
@@ -108351,7 +108340,6 @@ yinsfinance.com
 yinsha.com
 yinshenxia.com
 yinshua.cc
-yinshuahangyewang.mobi
 yinshuiyu.com
 yinsuwl.com
 yintai.com
