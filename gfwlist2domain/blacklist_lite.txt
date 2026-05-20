@@ -1294,6 +1294,7 @@ alefbank.com
 alexa.com
 alexanderstreet.com
 alexlur.org
+alfa.me
 alfabank.ru
 alfabank.st
 alfadirect.ru
@@ -11330,7 +11331,6 @@ hpcmw.net
 hpcodewarsbcn.com
 hpcomputers.com
 hpcomputerservices.com
-hpconnected.com
 hpconnected.net
 hpconnected.org
 hpconnected.us
@@ -21718,6 +21718,8 @@ teachparentstech.org
 teamamericany.com
 teamneedforspeed.com
 teamskeet.com
+teamspeak-services.com
+teamspeak.com
 teamviewer.com
 teamviewer.us
 tearapeak.com

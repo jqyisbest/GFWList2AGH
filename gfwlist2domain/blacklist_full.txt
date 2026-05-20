@@ -1573,6 +1573,7 @@ alexa.com
 alexanderlondoncollege.ac.uk
 alexanderstreet.com
 alexlur.org
+alfa.me
 alfabank.oavdo.amc
 alfabank.ru
 alfabank.st
@@ -14891,7 +14892,6 @@ hpcmw.net
 hpcodewarsbcn.com
 hpcomputers.com
 hpcomputerservices.com
-hpconnected.com
 hpconnected.net
 hpconnected.org
 hpconnected.us
@@ -29067,6 +29067,8 @@ teachparentstech.org
 teamamericany.com
 teamneedforspeed.com
 teamskeet.com
+teamspeak-services.com
+teamspeak.com
 teamviewer.com
 teamviewer.us
 teamwork.ac.uk
