@@ -12676,6 +12676,7 @@ gemini.com
 gen.lib.rus.ec
 gen.tr
 gen2.ac.uk
+gencraft.com
 gendai.net
 generated.photos
 generationpup.ac.uk
@@ -31310,6 +31311,7 @@ vdoav.com
 vecchiescopate.casa
 vector.im
 vedomosti.ru
+veed.io
 veet.at
 veet.be
 veet.ca
@@ -33407,6 +33409,7 @@ xiezhua.com
 xihua.es
 xii.jp
 xijie.wordpress.com
+xin21.xyz
 xinaia-av.buzz
 xinbao.de
 xindelu.com

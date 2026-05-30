@@ -9681,6 +9681,7 @@ gemfire.net
 gemfury.com
 gemini.com
 gen.tr
+gencraft.com
 gendai.net
 generated.photos
 genetic-technologies.am
@@ -23350,6 +23351,7 @@ vdoav.com
 vecchiescopate.casa
 vector.im
 vedomosti.ru
+veed.io
 veet.at
 veet.be
 veet.ca
@@ -24979,6 +24981,7 @@ xie56.xyz
 xiezhua.com
 xihua.es
 xii.jp
+xin21.xyz
 xinaia-av.buzz
 xinbao.de
 xindelu.com
