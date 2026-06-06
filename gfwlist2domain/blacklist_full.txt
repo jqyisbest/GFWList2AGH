@@ -7029,6 +7029,7 @@ clau.de
 claude.ai
 claude.com
 claudemcpclient.com
+claudemcpcontent.com
 claudeusercontent.com
 clawhub.ai
 clb.org.hk
@@ -28906,6 +28907,7 @@ suttoncollege.ac.uk
 suxib.com
 suxiebu.com
 suyangg.com
+suyingtv.com
 suzuri.jp
 svaboda.org
 svc.ms
@@ -33271,6 +33273,7 @@ wozy.in
 wp-themes.com
 wp.com
 wpewebkit.org
+wplace.live
 wpoforum.com
 wpvip.com
 wqe.ac.uk
