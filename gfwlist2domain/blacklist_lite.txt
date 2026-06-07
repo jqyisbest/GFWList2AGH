@@ -1581,6 +1581,7 @@ amcn.com
 amcnetworks.com
 amcplus.com
 amdfanstore.com
+amdgaming.com
 ameba.jp
 amebame.com
 amebaownd.com
@@ -4418,6 +4419,7 @@ budatt.com
 buddhistchannel.tv
 buddymedia.com
 buffered.com
+bugsnag.com
 bugzilla.org
 buhidoh.net
 buicha.social
@@ -4883,6 +4885,7 @@ cciernslabs.com
 cciesecuritylabs.com
 ccievoicelabs.com
 ccim.org
+ccleaner.com
 cclife.ca
 cclife.org
 cclifefl.org
@@ -5328,6 +5331,7 @@ cityoflove.com
 citypopulation.de
 citytalk.tw
 citytourgirls.com
+cityu.hk
 civicparty.hk
 civil3d.com
 civilcc.com
@@ -6010,6 +6014,7 @@ cuckwatchingwife.com
 cuckwimp.com
 cuebic.biz
 cuffiesaldi.com
+cuhk.hk
 cuhkacs.org
 cuihua.org
 cuinc.tw
@@ -7584,6 +7589,7 @@ edu.ir
 edu.tw
 edubridge.com
 education-cadcam.com
+eduhk.hk
 eduplus.hk
 edupro.org
 edx-cdn.org
@@ -8713,6 +8719,7 @@ files2me.com
 fileserve.com
 filesmonster.vip
 filesor.com
+filezilla-project.org
 filipino-music.net
 fillthesquare.org
 filme2.xxx
@@ -9941,6 +9948,7 @@ git.io
 gitbook.com
 gitbook.io
 gitbooks.io
+gitgud.io
 githack.com
 github.ai
 github.blog
@@ -11101,6 +11109,7 @@ hitun.io
 hitxhot.com
 hive.blog
 hiveon.net
+hivepress.io
 hizb-ut-tahrir.info
 hizb-ut-tahrir.org
 hizbuttahrir.org
@@ -11121,6 +11130,7 @@ hkbigman.net
 hkbn.net
 hkbnes.net
 hkbookcity.com
+hkbu.hk
 hkchronicles.com
 hkchurch.org
 hkcircleapp.com
@@ -11167,6 +11177,7 @@ hkteducation.com
 hktpremier.com
 hktshop.com
 hku.hk
+hkust.hk
 hkusu.net
 hkvwet.com
 hkzone.org
@@ -13776,6 +13787,7 @@ lanasbigboobs.com
 landofhope.tv
 langchain.com
 langsuirs.com
+languagetool.org
 lanik.us
 lanmdh.net
 lanniser-ylo.shop
@@ -15651,6 +15663,7 @@ motionpictureser.com
 motiyun.com
 moto.com
 motolia.com
+motopress.com
 motor4ik.ru
 motorola.ca
 motorola.cl
@@ -15805,6 +15818,7 @@ msturing.org
 msudalosti.com
 msunlimitedcloudsummit.com
 mswe1.org
+msys2.org
 mt.lv
 mt0011.site
 mtao.fun
@@ -17042,6 +17056,7 @@ o3o.ca
 o3t.ru
 o3team.ru
 oaistatic.com
+oaistatsig.com
 oaiusercontent.com
 oanda.com
 oanencore.com
@@ -18305,6 +18320,7 @@ polymarket.com
 polymer-project.org
 polymerhk.com
 polymerproject.org
+polyu.hk
 ponyanimalsex.com
 poofetish.com
 poolbinance.com
@@ -24921,6 +24937,7 @@ wp-themes.com
 wp.com
 wpewebkit.org
 wplace.live
+wpmailsmtp.com
 wpoforum.com
 wpvip.com
 wqyd.org

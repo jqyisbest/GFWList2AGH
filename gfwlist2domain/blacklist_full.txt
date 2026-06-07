@@ -1928,6 +1928,7 @@ amcn.com
 amcnetworks.com
 amcplus.com
 amdfanstore.com
+amdgaming.com
 amdigital.co.uk
 ameba.jp
 amebame.com
@@ -5638,6 +5639,7 @@ buddymedia.com
 bufdg.ac.uk
 buffered.com
 bufvc.ac.uk
+bugsnag.com
 bugzilla.org
 buhidoh.net
 bui.ac.uk
@@ -6302,6 +6304,7 @@ cciesecuritylabs.com
 ccievoicelabs.com
 ccim.org
 ccl.ac.uk
+ccleaner.com
 cclife.ca
 cclife.org
 cclifefl.org
@@ -6982,6 +6985,7 @@ citypopulation.de
 citysun.ac.uk
 citytalk.tw
 citytourgirls.com
+cityu.hk
 cityuniversitybirmingham.ac.uk
 ciu.ac.uk
 civicparty.hk
@@ -7961,6 +7965,7 @@ cue.ac.uk
 cuebic.biz
 cuffiesaldi.com
 cuhk.edu.hk
+cuhk.hk
 cuhkacs.org
 cuhop.ac.uk
 cuihua.org
@@ -10059,6 +10064,7 @@ education-cadcam.com
 educationlondonconnect.ac.uk
 educationpartnershipne.ac.uk
 educationpartnershipnortheast.ac.uk
+eduhk.hk
 eduplus.hk
 edupro.org
 eduroam.ac.uk
@@ -11528,6 +11534,7 @@ files2me.com
 fileserve.com
 filesmonster.vip
 filesor.com
+filezilla-project.org
 filipino-music.net
 fillthesquare.org
 filmandsound.ac.uk
@@ -12961,6 +12968,7 @@ git.io
 gitbook.com
 gitbook.io
 gitbooks.io
+gitgud.io
 githack.com
 github-api.arkoselabs.com
 github.ai
@@ -14600,6 +14608,7 @@ hitun.io
 hitxhot.com
 hive.blog
 hiveon.net
+hivepress.io
 hizb-ut-tahrir.info
 hizb-ut-tahrir.org
 hizbuttahrir.org
@@ -14628,6 +14637,7 @@ hkbn.com.hk
 hkbn.net
 hkbnes.net
 hkbookcity.com
+hkbu.hk
 hkchronicles.com
 hkchurch.org
 hkci.org.hk
@@ -14683,6 +14693,7 @@ hkteducation.com
 hktpremier.com
 hktshop.com
 hku.hk
+hkust.hk
 hkusu.net
 hkvets.ac.uk
 hkvwet.com
@@ -17993,6 +18004,7 @@ languagebox.ac.uk
 languagesmythsfinds.ac.uk
 languagesresearch.ac.uk
 languagessoutheast.ac.uk
+languagetool.org
 lanik.us
 lanmdh.net
 lanniser-ylo.shop
@@ -20613,6 +20625,7 @@ motionpictureser.com
 motiyun.com
 moto.com
 motolia.com
+motopress.com
 motor4ik.ru
 motorola.ca
 motorola.cl
@@ -20805,6 +20818,7 @@ msturing.org
 msudalosti.com
 msunlimitedcloudsummit.com
 mswe1.org
+msys2.org
 mt.co.kr
 mt.lv
 mt0011.site
@@ -22667,6 +22681,7 @@ o3t.ru
 o3team.ru
 oaa-anaes.ac.uk
 oaistatic.com
+oaistatsig.com
 oaiusercontent.com
 oakhill.ac.uk
 oaklands.ac.uk
@@ -24259,6 +24274,7 @@ polymarket.com
 polymer-project.org
 polymerhk.com
 polymerproject.org
+polyu.hk
 poms.ac.uk
 pone.ac.uk
 pontypridd.ac.uk
@@ -33274,6 +33290,7 @@ wp-themes.com
 wp.com
 wpewebkit.org
 wplace.live
+wpmailsmtp.com
 wpoforum.com
 wpvip.com
 wqe.ac.uk
