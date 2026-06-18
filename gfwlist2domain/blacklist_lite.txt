@@ -1839,6 +1839,7 @@ appbridge.io
 appbridge.it
 appcenter.ms
 appcloud.com
+appconsent.io
 appdomain.cloud
 appdownloader.net
 appdynamics.com
@@ -2669,6 +2670,7 @@ awswaf.com
 awwcn.buzz
 awwcn.xyz
 awxcdn.com
+axept.io
 axios.com
 axureformac.com
 ayabank.com
@@ -4918,6 +4920,7 @@ cdig.info
 cdjp.org
 cdkworkshop.com
 cdmatech.com
+cdn-cookieyes.com
 cdn-telegram.org
 cdn-terapeak.com
 cdn-tinkoff.ru
@@ -5808,6 +5811,7 @@ conoha.jp
 conquerwithcharacter.com
 conscrypt.com
 conscrypt.org
+consentmanager.net
 consentpro.com
 constitutionalism.solutions
 constructware.com
@@ -5823,9 +5827,11 @@ conviva.com
 convrgencegame.com
 coobay.com
 cooer.su
+cookiebot.com
 cookiechoices.org
 cookielaw.org
 cookiepro.com
+cookieyes.com
 cool-comics.com
 cool18.com
 cool3c.com
@@ -22154,6 +22160,7 @@ terapeak.info
 teraperk.com
 terk.nl
 termius.com
+termly.io
 termux.com
 termux.dev
 termux.org
@@ -22861,6 +22868,7 @@ truesocial.media
 trulyergonomic.com
 trunest.com
 trust-provider.com
+trustarc.com
 trustasiassl.com
 trustcor.ca
 trustcor.com
