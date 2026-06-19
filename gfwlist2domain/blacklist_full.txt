@@ -685,6 +685,7 @@
 9nation.com.au
 9news.com.au
 9now.com.au
+9oju31.launches.appsflyersdk.com
 9tak-nav.buzz
 9to5google.com
 9to5mac.com
@@ -2216,6 +2217,7 @@ api-secure.recaptcha.net
 api-verify.recaptcha.net
 api.ai
 api.mixpanel.com
+api.moomoobull.com
 api.nebula-emby.com
 api.news
 api.palworldgame.com
@@ -6547,6 +6549,7 @@ cfs.ac.uk
 cfsh99.com
 cftfc.com
 cfwives.com
+cg.play-analytics.com
 cgdepot.org
 cgh.ac.uk
 cgkate.jinvod.com
@@ -8736,6 +8739,7 @@ dezyred.com
 df-bet.com
 dfas.mil
 dfn.org
+dfvpn.com
 dgaqp.com
 dgg.gg
 dghe.ac.uk
@@ -12455,12 +12459,25 @@ futhead.com
 futoka.jp
 futpromos.com
 futu.cn
+futu.com
 futu.link
+futu0.com
+futu1.com
+futu2.com
+futu3.com
+futu4.com
+futu6.com
+futu7.com
+futu8.com
+futu9.com
+futubull.cn
+futuchain.com
 futuhk.com
 futuhk1.com
 futuhk2.com
 futuhkapp.com
 futuholdings.com
+futuinc.com
 futunited.com
 futuoa.com
 future-cs.ru
@@ -12577,6 +12594,7 @@ gamesplanet.com
 gamesstack.com
 gametap.com
 gameuxmasterguide.com
+gamewtb.com
 gamez.com.tw
 gaming-notebooks.com
 gamme.com.tw
@@ -13241,6 +13259,7 @@ gobuildx.net
 gobuyonlinestore.net
 gockhuatviet.com
 godaddy.com
+godaddy.net
 godalming.ac.uk
 godbolt.org
 godfootsteps.org
@@ -18741,6 +18760,7 @@ longmabook.com
 longmabookcn.com
 longman.ch
 longmusic.com
+longportapp.cn
 longportapp.com
 longroad.ac.uk
 longtailvideo.com
@@ -20643,6 +20663,7 @@ monthlyav.com
 moodleshare-hw.ac.uk
 moodstocks.com
 moodyz.com
+moomoobull.com
 moon.fm
 moonbbs.com
 moonbbs.info
@@ -27256,6 +27277,7 @@ sgp.file.myqcloud.com
 sgp1.fun
 sgpe.ac.uk
 sgpstatp.com
+sgqt0j.launches.appsflyersdk.com
 sgr.com.br
 sgsah.ac.uk
 sgscol.ac.uk
@@ -27478,6 +27500,7 @@ shoppinguheadphones.com
 shops-disney.com
 shopspeedtv.com
 shoptraivip.com
+shortconn.im.qcloud.com
 shorturl.at
 shotgridsoftware.com
 shotgridstudio.com
@@ -29353,6 +29376,7 @@ tay.ac.uk
 taylorandfrancis.com
 taylorfrancis.com
 tb-esim.ru
+tb.pro
 tbank-online.com
 tbank.ru
 tbcollege.org
@@ -29923,6 +29947,7 @@ thumbnailseries.com
 thumbzilla.com
 thunderbird.net
 thunderbolttechnology.net
+thundermail.com
 thurrock.ac.uk
 thurrockcampus.ac.uk
 thywords.com
@@ -30039,6 +30064,7 @@ tiendabestbuy.com
 tiffany-towers.com
 tig-ol-bitties.live
 tigerbbs.cn
+tigerbrokers.nz
 tigervpn.com
 tiipple.ac.uk
 tiktok-minis.com
@@ -30341,6 +30367,7 @@ tracingnetworks.ac.uk
 tracker.gg
 tracker.network
 tracking-location.com
+tradeup.com
 tradevip1.com
 tradingview.com
 trae.ai
@@ -33432,6 +33459,7 @@ ws.audioscrobbler.com
 wsc.ac.uk
 wscinternational.ac.uk
 wsfc.ac.uk
+wsimg.com
 wsj.com
 wsj.jobs
 wsj.net
@@ -34929,6 +34957,7 @@ zhengwunet.org
 zhenlibu.info
 zhenlibu1984.com
 zhenxiang.biz
+zhijianfengyi.cn
 zhijie.online
 zhimeishe888.com
 zhinengluyou.com

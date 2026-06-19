@@ -6564,6 +6564,7 @@ dezyred.com
 df-bet.com
 dfas.mil
 dfn.org
+dfvpn.com
 dgaqp.com
 dgg.gg
 dgwav.com
@@ -9531,12 +9532,25 @@ futhead.com
 futoka.jp
 futpromos.com
 futu.cn
+futu.com
 futu.link
+futu0.com
+futu1.com
+futu2.com
+futu3.com
+futu4.com
+futu6.com
+futu7.com
+futu8.com
+futu9.com
+futubull.cn
+futuchain.com
 futuhk.com
 futuhk1.com
 futuhk2.com
 futuhkapp.com
 futuholdings.com
+futuinc.com
 futunited.com
 futuoa.com
 future-cs.ru
@@ -9629,6 +9643,7 @@ gamesplanet.com
 gamesstack.com
 gametap.com
 gameuxmasterguide.com
+gamewtb.com
 gaming-notebooks.com
 gamousa.com
 gandhara.ru
@@ -10147,6 +10162,7 @@ gobuildx.net
 gobuyonlinestore.net
 gockhuatviet.com
 godaddy.com
+godaddy.net
 godbolt.org
 godfootsteps.org
 godns.work
@@ -14270,6 +14286,7 @@ longmabook.com
 longmabookcn.com
 longman.ch
 longmusic.com
+longportapp.cn
 longportapp.com
 longtailvideo.com
 longtermly.net
@@ -15697,6 +15714,7 @@ monstershopcheapbeats.net
 monthlyav.com
 moodstocks.com
 moodyz.com
+moomoobull.com
 moon.fm
 moonbbs.com
 moonbbs.info
@@ -22008,6 +22026,7 @@ taxitax.org
 taylorandfrancis.com
 taylorfrancis.com
 tb-esim.ru
+tb.pro
 tbank-online.com
 tbank.ru
 tbcollege.org
@@ -22434,6 +22453,7 @@ thumbnailseries.com
 thumbzilla.com
 thunderbird.net
 thunderbolttechnology.net
+thundermail.com
 thywords.com
 thz7.net
 tiananmenduizhi.com
@@ -22539,6 +22559,7 @@ tiendabestbuy.com
 tiffany-towers.com
 tig-ol-bitties.live
 tigerbbs.cn
+tigerbrokers.nz
 tigervpn.com
 tiktok-minis.com
 tiktok-row.net
@@ -22793,6 +22814,7 @@ tracfone.com
 tracker.gg
 tracker.network
 tracking-location.com
+tradeup.com
 tradevip1.com
 tradingview.com
 trae.ai
@@ -25056,6 +25078,7 @@ wretch.cc
 writesonic.com
 ws-blau.com
 ws-tcg.com
+wsimg.com
 wsj.com
 wsj.jobs
 wsj.net
@@ -26276,6 +26299,7 @@ zhengwunet.org
 zhenlibu.info
 zhenlibu1984.com
 zhenxiang.biz
+zhijianfengyi.cn
 zhimeishe888.com
 zhinengluyou.com
 zhizhu.top
