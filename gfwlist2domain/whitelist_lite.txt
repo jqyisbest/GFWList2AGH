@@ -10087,7 +10087,6 @@ aa5c82aeb10271.beer
 aa5d.com
 aa65535.com
 aa6666.com
-aa67678156.com
 aa6f0397a3cf50d7.com
 aa76858896.com
 aa77kk.com
@@ -68940,6 +68939,7 @@ mysmth.net
 mysongktv.com
 mysore-yoga.com
 myspain.org
+mysqil.com
 mysql360.com
 mysqlab.net
 myssl.com
@@ -95119,7 +95119,6 @@ vpea.ca
 vpgame.com
 vpgamecdn.com
 vpiaotong.com
-vpie.net
 vpimg1.com
 vpimg2.com
 vpimg3.com
@@ -104998,7 +104997,6 @@ yidaointernational.com
 yidaomall.com
 yidaomobi.com
 yidaplay.com
-yidaweb.com
 yide.com
 yideamobile.com
 yidejia.com

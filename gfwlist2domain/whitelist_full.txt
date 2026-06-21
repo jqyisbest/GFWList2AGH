@@ -10106,7 +10106,6 @@ aa5c82aeb10271.beer
 aa5d.com
 aa65535.com
 aa6666.com
-aa67678156.com
 aa6f0397a3cf50d7.com
 aa76858896.com
 aa77kk.com
@@ -14196,6 +14195,7 @@ b-fairy.com
 b-k-automation.com
 b-raymedia.com
 b.biz
+b.c2r.ts.cdn.office.net
 b01.net
 b02f0d7f3745ba7c.com
 b041e427810281.beer
@@ -34469,6 +34469,7 @@ f-dou.com
 f-insight.com
 f-stack.org
 f.biz
+f.c2r.ts.cdn.office.net
 f.cx
 f008.com
 f015dfc4510292.beer
@@ -69659,6 +69660,7 @@ mysmth.net
 mysongktv.com
 mysore-yoga.com
 myspain.org
+mysqil.com
 mysql360.com
 mysqlab.net
 myssl.com
@@ -83419,6 +83421,7 @@ shejiyue.com
 sheketiandi.com
 shekou.com
 shelive.net
+shell.cdn.office.net
 shellpub.com
 shellsec.com
 shelter-china.com
@@ -87308,6 +87311,7 @@ staticfile.net
 staticfile.org
 statickksmg.com
 statics.cc
+statics.teams.cdn.office.net
 staticsdd.com
 staticsoe.com
 staticsoem.com
@@ -96198,7 +96202,6 @@ vpea.ca
 vpgame.com
 vpgamecdn.com
 vpiaotong.com
-vpie.net
 vpimg1.com
 vpimg2.com
 vpimg3.com
@@ -106182,7 +106185,6 @@ yidaointernational.com
 yidaomall.com
 yidaomobi.com
 yidaplay.com
-yidaweb.com
 yide.com
 yideamobile.com
 yidejia.com
