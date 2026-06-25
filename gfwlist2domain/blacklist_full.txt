@@ -8413,7 +8413,6 @@ deepmind.com
 deeside.ac.uk
 deezer.com
 defac.ac.uk
-default.exp-tas.com
 defenceacademy.ac.uk
 definebabe.com
 definefetish.com
@@ -12855,6 +12854,7 @@ gerritcodereview.com
 gesoten.com
 gesource.ac.uk
 get.app
+get.dappcdn.com
 get.dev
 get.how
 get.new
