@@ -7671,6 +7671,7 @@ coova.com
 coova.net
 coova.org
 copac.ac.uk
+copilot.com
 copilot.microsoft.com
 copim.ac.uk
 copior.ac.uk
@@ -32915,6 +32916,7 @@ webrtc.org
 webrush.net
 webs-tv.net
 websdr.org
+webshare.io
 website.new
 websitepulse.com
 websnapr.com
