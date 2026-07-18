@@ -12815,6 +12815,7 @@ api-forwards.com
 api-m.com
 api-vod-qcloud.com
 api.anythinktech.com
+api.blipsandchitz.me
 api.cnno1.uds.lenovo.com
 api.crisp.chat
 api.day.app
@@ -17290,6 +17291,7 @@ bling.link
 blingabc.com
 blinghour.com
 blingoffice.com
+blipsandchitz.me
 blissmall.net
 blizzardcn.com
 blju.com
@@ -69036,6 +69038,7 @@ mychuguan.com
 mychunyan.net
 myckjr.com
 mycleanmymac.com
+mycloudnas.com
 mycloudstudy.com
 myclub2.com
 mycnc.org
