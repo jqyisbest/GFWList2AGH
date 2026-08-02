@@ -792,6 +792,7 @@ acrobat.com
 actalis.com
 actalis.it
 actfortibet.org
+actifio.com
 activematter.game
 activeteachonline.com
 activpn.com
@@ -13247,7 +13248,10 @@ jessicaturner.com
 jetbra.in
 jetbrains.ai
 jetbrains.cloud
+jetbrains.dev
 jetbrains.net
+jetbrains.org
+jetbrains.ru
 jetbrains.space
 jetbrains.team
 jetfuelapp.com
@@ -13834,6 +13838,8 @@ korona.com
 koshelek.app
 koskade.com
 kostenlosepornoclips.com
+kotl.in
+kotlinconf.com
 kotlinlang.org
 koubaibu.jp
 koukoku.jp
@@ -13863,6 +13869,7 @@ kspcoin.com
 ksyp10.com
 ktachibana.party
 ktech.team
+ktor.io
 ktvu.com
 ktzhk.com
 ku77.xyz
@@ -16207,6 +16214,7 @@ myicloud.net
 myiphide.com
 myiphider.com
 myipod.net
+myjetbrains.com
 myjkwd.com
 myjs.tw
 mykomica.org
@@ -17067,6 +17075,7 @@ ntdtv.se
 ntdtvla.com
 ntdvideo.tw
 ntdvn.com
+nthlink.com
 ntl.fyi
 ntp-servers.net
 ntp.se
@@ -17565,6 +17574,7 @@ openweathermap.org
 openweave.io
 openwebster.com
 openwrt.org
+openxla.org
 opera-mini.net
 opera.com
 opinionjournal.com
@@ -22086,6 +22096,7 @@ taleofthenight.com
 talkatone.com
 talkboxapp.com
 talkcc.com
+talkingkotlin.com
 talkonly.net
 talksport.com
 tamiaode.tk
