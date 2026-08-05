@@ -6380,6 +6380,8 @@ deepfreeze.net
 deepfreeze.tech
 deepl.com
 deepmind.com
+deepwiki.com
+deepwiki.org
 deezer.com
 definebabe.com
 definefetish.com
@@ -9000,8 +9002,11 @@ fluidpreview.com
 flurry.com
 flutter.dev
 flutterapp.com
+fly.dev
+fly.io
 flyflv.com
 flyingjizz.com
+flyio.net
 flypool.org
 flyvpn.com
 flyyindh-cc.sbs
@@ -10111,6 +10116,7 @@ glarity.app
 glasamerike.net
 glass8.eu
 gleline.com
+glitchwave.com
 global-sci.org
 globaledu.org
 globaljihad.net
@@ -17732,12 +17738,15 @@ ozodlik.org
 ozon-credit.ru
 ozon-dostavka.ru
 ozon-tech.ru
+ozon.app
 ozon.by
 ozon.com
 ozon.dev
 ozon.express
+ozon.global
 ozon.kz
 ozon.li
+ozon.market
 ozon.ru
 ozon.tech
 ozon.tm
@@ -20075,6 +20084,7 @@ rutracker.org
 rutrecker.net
 rutrk.org
 rutube.ru
+rutube.sport
 rutubelist.ru
 ruvideos.net
 ruyiseek.com
@@ -20083,6 +20093,7 @@ rwbautomation.ru
 rwbautomation.tech
 rwbgeo.ru
 rxhj.net
+rym.fm
 rzr.to
 s-bluemix.net
 s-books.com
@@ -21181,6 +21192,7 @@ sneakme.net
 snjulebu.com
 snk-corp.info
 snkplaymore.info
+snmc.io
 snow.me
 snowcorp.com
 snowlionpub.com
@@ -21257,6 +21269,8 @@ solveforx.com
 somanylolies.com
 somee.com
 sonatype.org
+sonematic.net
+sonemic.com
 songjianjun.com
 sonicbbs.cc
 sonidodelaesperanza.org
