@@ -20011,6 +20011,7 @@ rs2022.com
 rsdlmonitor.com
 rsf-chinese.org
 rsf.org
+rsg.ms
 rsg.sc
 rsgamen.org
 rshb.ru
@@ -20342,6 +20343,8 @@ sbnation.com
 sbrf.ru
 sbuxcard.com
 sc-cdn.net
+sc-gw.com
+sc-static.net
 sca-tolo.info
 scala-lang.org
 scala-sbt.org
