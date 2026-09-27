@@ -10262,6 +10262,7 @@ go-gaytube.com
 go-lang.com
 go-lang.net
 go-lang.org
+go-mpulse.net
 go-pki.com
 go-to-zlibrary.se
 go.com
@@ -23933,6 +23934,7 @@ vaultify.com
 vaultify.info
 vaultify.net
 vaultproject.io
+vava8.com
 vbcdn.com
 vbcdn.net
 vbejeyv.shop
