@@ -13609,6 +13609,7 @@ jsdelivr.com
 jsdelivr.net
 jshell.net
 jshint.com
+jspm.io
 jstv51.com
 jstv52.com
 jstv53.com
