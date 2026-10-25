@@ -41,6 +41,7 @@
 123-hp.com
 123av.com
 123av.me
+123av.org
 123bin.cc
 123dapp.com
 123dappipad.com
@@ -192,6 +193,7 @@
 1password.co
 1password.com
 1password.community
+1password.dev
 1password.eu
 1password.io
 1passwordservices.com
@@ -3484,6 +3486,7 @@ bibliocommons.com
 bibox.com
 bic2011.org
 bidbay.com
+bidobido.xyz
 bidong25.com
 bidong9.com
 bidorbuyindia.com
@@ -3537,6 +3540,7 @@ bijukujo.club
 bikaa.xyz
 bikac.xyz
 bikaios.xyz
+bikawebapp.com
 bild.de
 bili2.cc
 bili888.com
@@ -5035,6 +5039,10 @@ cdp1989.org
 cdp1998.org
 cdp2006.org
 cdpeu.org
+cdpred.services
+cdprojekt.com
+cdprojekt.red
+cdprojektred.com
 cdpusa.org
 cdpweb.org
 cdpwu.org
@@ -6229,6 +6237,7 @@ cybercrimecon.com
 cyberctm.com
 cyberghostvpn.com
 cybermondaybeats4sale.com
+cyberpunk.net
 cybersport.ru
 cyberx.com
 cygames.jp
@@ -11872,6 +11881,7 @@ hua-yue.net
 huabansp.com
 huabansp7.club
 huaglad.com
+huakacomic.com
 huanghuagang.org
 huangse.love
 huangyiyu.com
@@ -13880,6 +13890,7 @@ killwall.com
 kilmeadeandfriends.com
 kimchi.tv
 kimogirl.cc
+kimootoko.net
 kimosex.com
 kindgirls.com
 kindindianporn.com
@@ -15715,6 +15726,7 @@ miniwidget.ca
 miniwindsor.com
 miniworkshop.com
 miniyaletown.ca
+minkch.com
 minnano-av.com
 minne.com
 minneapolisbmw.com
@@ -15851,6 +15863,7 @@ moedigi.com
 moeero-library.com
 moeerolibrary.com
 moefuns.co
+moegirl.org
 moeimg.net
 moeli-desu.com
 moemax.net
@@ -17147,6 +17160,7 @@ nixos.wiki
 nixpkgs.org
 niziero.info
 njactb.org
+njav.com
 njav.tv
 njavtv.com
 njpw1972.com
@@ -18462,6 +18476,7 @@ pi-vr.com
 piaotia.com
 piaotian.net
 piapro.net
+pica-id.com
 picacg2022.com
 picacgy.com
 picacn.xyz
@@ -18643,6 +18658,7 @@ playfab.com
 playfabapi.com
 playfamily.ru
 playforceone.com
+playgwent.com
 playhearthstone.com
 playmation.com
 playmeow.com
@@ -18695,6 +18711,7 @@ pmates.com
 pmem.org
 pmem.us
 pmhcjk.com
+po-kaki-to.com
 po18.tw
 po2b.com
 pobeda.page
@@ -22810,6 +22827,7 @@ theweek.com
 theweek.in
 thewgo.org
 thewirechina.com
+thewitcher.com
 thewonderful101.com
 theync.com
 theyxxx.com
@@ -23051,6 +23069,7 @@ tinypic.com
 tinyurl.com
 tiohentai.com
 tipas.net
+tipatipa.xyz
 tire-cadcam.com
 tiresplus.com
 tistory.com
@@ -26891,6 +26910,7 @@ zorglist.com
 zorrovpn.com
 zotero.org
 zozotown.com
+zozovideo.com
 zpagov.net
 zpath.com
 zpn.im

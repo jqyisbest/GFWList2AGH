@@ -44,6 +44,7 @@
 123-hp.com
 123av.com
 123av.me
+123av.org
 123bin.cc
 123dapp.com
 123dappipad.com
@@ -206,6 +207,7 @@
 1password.co
 1password.com
 1password.community
+1password.dev
 1password.drift.click
 1password.eu
 1password.io
@@ -4319,6 +4321,7 @@ bicpa.ac.uk
 bicton.ac.uk
 bidbay.com
 bidi.net.uk
+bidobido.xyz
 bidong25.com
 bidong9.com
 bidorbuyindia.com
@@ -4383,6 +4386,7 @@ bijukujo.club
 bikaa.xyz
 bikac.xyz
 bikaios.xyz
+bikawebapp.com
 bil.ac.uk
 bilborough.ac.uk
 bild.de
@@ -6513,6 +6517,10 @@ cdp1989.org
 cdp1998.org
 cdp2006.org
 cdpeu.org
+cdpred.services
+cdprojekt.com
+cdprojekt.red
+cdprojektred.com
 cdpuk.co.uk
 cdpusa.org
 cdpweb.org
@@ -8227,6 +8235,7 @@ cybercrimecon.com
 cyberctm.com
 cyberghostvpn.com
 cybermondaybeats4sale.com
+cyberpunk.net
 cybersecurity-cdt.ac.uk
 cybersecuritycdt.ac.uk
 cybersport.ru
@@ -15490,6 +15499,7 @@ hua-yue.net
 huabansp.com
 huabansp7.club
 huaglad.com
+huakacomic.com
 huanghuagang.org
 huangse.love
 huangyiyu.com
@@ -18008,6 +18018,7 @@ kilmarnock.ac.uk
 kilmeadeandfriends.com
 kimchi.tv
 kimogirl.cc
+kimootoko.net
 kimosex.com
 kimy.com.tw
 kindgirls.com
@@ -20608,6 +20619,7 @@ miniwidget.ca
 miniwindsor.com
 miniworkshop.com
 miniyaletown.ca
+minkch.com
 minnano-av.com
 minne.com
 minneapolisbmw.com
@@ -20787,6 +20799,7 @@ moedigi.com
 moeero-library.com
 moeerolibrary.com
 moefuns.co
+moegirl.org
 moeimg.net
 moeli-desu.com
 moemax.net
@@ -21043,6 +21056,7 @@ movidius.com
 movidius.net
 movidius.org
 movie-erog.com
+movie.eroterest.net
 movie1000.xyz
 moviefap.com
 moviepost.com
@@ -22524,6 +22538,7 @@ nixos.wiki
 nixpkgs.org
 niziero.info
 njactb.org
+njav.com
 njav.tv
 njavtv.com
 njncscotlandscolleges.ac.uk
@@ -24370,6 +24385,7 @@ piaotia.com
 piaotian.net
 piapp.com.tw
 piapro.net
+pica-id.com
 picacg2022.com
 picacgy.com
 picacn.xyz
@@ -24583,6 +24599,7 @@ playfab.com
 playfabapi.com
 playfamily.ru
 playforceone.com
+playgwent.com
 playhearthstone.com
 playmation.com
 playmeow.com
@@ -24651,6 +24668,7 @@ pmem.us
 pmhcjk.com
 pml.ac.uk
 pms.ac.uk
+po-kaki-to.com
 po18.tw
 po2b.com
 pobeda.page
@@ -30294,6 +30312,7 @@ theweek.com
 theweek.in
 thewgo.org
 thewirechina.com
+thewitcher.com
 thewomenslibrary.ac.uk
 thewonderful101.com
 theync.com
@@ -30574,6 +30593,7 @@ tinypic.com
 tinyurl.com
 tiohentai.com
 tipas.net
+tipatipa.xyz
 tipo.gov.tw
 tipple.ac.uk
 tire-cadcam.com
@@ -35571,6 +35591,7 @@ zorglist.com
 zorrovpn.com
 zotero.org
 zozotown.com
+zozovideo.com
 zpagov.net
 zpath.com
 zpn.im
