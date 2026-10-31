@@ -133,6 +133,7 @@
 18comic-god.xyz
 18comic.cc
 18comic.company
+18comic.ink
 18comic.org
 18comic.vip
 18commic.com
@@ -2166,6 +2167,7 @@ antf.ac.uk
 anthemgame.com
 anthemthegame.com
 anthonycalzadilla.com
+anthropic.auth0.com
 anthropic.com
 anthropic.team
 anthropology.ac.uk
@@ -4467,6 +4469,7 @@ bingapistatistics.com
 bingoporno.com
 bingparachute.com
 bingsandbox.com
+bingstatic.com
 bingvisualsearch.com
 bingworld.com
 bingx.com
@@ -5668,6 +5671,7 @@ bsixbrookehouse.ac.uk
 bsixbrookehousesixthformcollege.ac.uk
 bsixcollege.ac.uk
 bsky.app
+bsky.chat
 bsky.network
 bsky.social
 bsls.ac.uk
@@ -13285,6 +13289,7 @@ githubapp.com
 githubassets.com
 githubcopilot.com
 githubhackathon.com
+githubhelp.com
 githubnext.com
 githubpreview.dev
 githubstatus.com
@@ -21187,6 +21192,7 @@ msftconnecttest.com
 msfteducation.ca
 msftncsi.com
 msftnet.org
+msftstatic.com
 msgamesresearch.com
 msgamestudios.com
 msguancha.com
@@ -30545,9 +30551,12 @@ tiktokd.org
 tiktokeu-cdn.com
 tiktokglobalshopv.com
 tiktokminis.us
+tiktokshop.com
+tiktokstaticb.com
 tiktokv.com
 tiktokv.eu
 tiktokv.us
+tiktokvapp.com
 tiktokw.eu
 tiktokw.us
 tilda.cc
