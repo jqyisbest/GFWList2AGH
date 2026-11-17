@@ -6254,6 +6254,7 @@ cybermondaybeats4sale.com
 cyberpunk.net
 cybersport.ru
 cyberx.com
+cygames.com
 cygames.jp
 cygwin.com
 cylink.pro
@@ -6474,6 +6475,7 @@ dealtree.org
 deasians.com
 debank.com
 debian.org
+debot.ai
 debug.com
 debugproject.com
 decentr.net
@@ -20004,6 +20006,7 @@ releaseinternational.org
 religionnews.com
 religioustolerance.org
 remirepo.net
+remna.dev
 remna.st
 rencapbank.ru
 renchead.com
@@ -26393,6 +26396,7 @@ yaya.cyou
 yayabay.com
 yayadizhi.xyz
 yazhouse8.com
+yb-payment.ru
 yccdn.ru
 yclients.com
 ycombinator.com
