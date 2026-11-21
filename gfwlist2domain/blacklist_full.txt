@@ -7350,6 +7350,7 @@ cmhalq.com
 cmi.org.tw
 cmmedia.com.tw
 cmoinc.org
+cmoney.tw
 cmpaas.com
 cmpcp.ac.uk
 cmrbank.ru
@@ -7395,7 +7396,6 @@ cnnmoneystream.com
 cnnpolitics.com
 cnpolitics.org
 cnproxy.com
-cnshopin.com
 cnyes.com
 cnzjp.xyz
 co-op.ac.uk
@@ -12835,6 +12835,7 @@ gameuxmasterguide.com
 gamewtb.com
 gamez.com.tw
 gaming-notebooks.com
+gamma.app
 gamme.com.tw
 gamousa.com
 gandhara.ru
@@ -14044,6 +14045,7 @@ greatwesternresearch.ac.uk
 greatzhonghua.org
 green-box-tv.com
 greenbankcollege.ac.uk
+greenbean.media
 greenbuildingstudio.com
 greenend.org.uk
 greenfieldbookstore.com.hk
@@ -14985,10 +14987,12 @@ hkchurch.org
 hkci.org.hk
 hkcircleapp.com
 hkcitizenmedia.com
+hkcitycreation.com
 hkcmi.edu
 hkcnews.com
 hkcoc.com
 hkcoc.weather.com.hk
+hkcourtnews.com
 hkcsl.com
 hkctu.org.hk
 hkdailynews.com.hk
@@ -15004,6 +15008,7 @@ hkf2023.lat
 hkf202311.site
 hkf202312.shop
 hkfaa.com
+hkfeature.com
 hkfreezone.com
 hkfront.org
 hkgalden.com
@@ -18703,6 +18708,7 @@ lifelonglearning.ac.uk
 lifemiles.com
 lifeselector.com
 lifesign.ac.uk
+lifesitenews.com
 lifestudy.ac.uk
 lifestyle-tec.ru
 lifewire.com
@@ -19643,6 +19649,7 @@ massage-in-taipei.com
 massagerepublic.com
 masseffect.com
 masseffectarchives.com
+master-insight.com
 mastercad.com
 mastercard-email.com
 mastercard.ae
@@ -19850,6 +19857,7 @@ mbn.ac.uk
 mbro.ac.uk
 mbs-worldwide.ac.uk
 mbs.ac.uk
+mc.yandex.ru
 mc6.ac.uk
 mca.ac.uk
 mcadforums.com
@@ -20909,6 +20917,7 @@ moneta.ru
 money-link.com.tw
 moneydj.com
 moneyhome.biz
+moneynet.com.tw
 moneyswift.online
 moneywithfacebook.com
 mongodb.com
@@ -21358,6 +21367,7 @@ mxrouting.net
 mxshm.site
 my-enema.com
 my-formosa.com
+my-formosa.com.tw
 my-kualalumpur-1.myhuaweicloud.com
 my-magazine.me
 my-manager-account.com
@@ -25527,6 +25537,7 @@ pullfolio.co
 pullfolio.com
 pullstring.net
 pulsebrowser.app
+pulsehknews.com
 punishbang.com
 punishworld.com
 punyu.com
@@ -27753,6 +27764,7 @@ shambalapost.com
 shambhalasun.com
 shameless.com
 shangfang.org
+shanghainationalparty.com
 shaparak.ir
 shapelcounset.xyz
 shapeservices.com
@@ -28612,6 +28624,7 @@ soubory.com
 souka.xyz
 soul-plus.net
 soulcaliburhentai.net
+soulogic.com
 soumo.info
 sound-heritage.ac.uk
 soundcloud.cloud
@@ -29760,6 +29773,7 @@ taiwanncf.org.tw
 taiwannews.com.tw
 taiwanonline.cc
 taiwansex.tw
+taiwantoday.tw
 taiwantp.net
 taiwantt.org.tw
 taiwanus.net
@@ -30197,6 +30211,7 @@ theclub.com.hk
 theclubprive.com
 theclyster.com
 thecobaltstudy.ac.uk
+thecollectivehk.com
 thecompaqstore.com
 thecontactpartnership.ac.uk
 theconversation.com
@@ -30281,6 +30296,7 @@ thenewslens.com
 thenextweb.com
 thenipslip.com
 theoca.ac.uk
+theonlinecitizen.com
 theopportunityproject.org
 thepaypalshop.com
 thepervs.com
@@ -30328,6 +30344,7 @@ theskillsco.ac.uk
 thespeeder.com
 thestandard.com.hk
 thestandnews.com
+thestar.com
 thestationbymaker.com
 thesun.co.uk
 thesun.ie
@@ -30358,6 +30375,7 @@ theweek.in
 thewgo.org
 thewirechina.com
 thewitcher.com
+thewitnesshk.com
 thewomenslibrary.ac.uk
 thewonderful101.com
 theync.com
@@ -33893,6 +33911,7 @@ wolterskluwer.com
 wolvcoll.ac.uk
 wolverhampton.ac.uk
 wolverhamptonline.ac.uk
+womany.net
 wombo.ai
 womensnikeshox.com
 womenwill.com
